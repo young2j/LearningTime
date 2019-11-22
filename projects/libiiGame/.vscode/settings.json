@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "database": ".\\test.db",
+            "dialect": "SQLite",
+            "name": "GameData"
+        }
+    ],
+    "sqltools.useNodeRuntime": true,
+    "java.dependency.syncWithFolderExplorer": false
+}

@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Jump",
+            "request": "launch",
+            "mainClass": "Jump"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Jump",
+            "request": "launch",
+            "mainClass": "com.vince.jump.Jump"
+        }
+    ]
+}
