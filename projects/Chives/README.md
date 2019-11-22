@@ -1,0 +1,1 @@
+This is a personal planning project that combines traditional strategies like $\alpha$ and $\beta$ with currently hot AI strategies like trees and nn models.Although this project is primarily aimed to impove skills, I still hope it will succeed and become a light,easy-to-use and excellent quantitative application.

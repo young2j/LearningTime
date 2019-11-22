@@ -1,0 +1,243 @@
+<!DOCTYPE html> 
+<html lang="zh-CN"> 
+    <head> 
+        <meta name="viewport" content='width=device-width,initial-scale=1' charset="UTF-8"> 
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">  -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"> 
+        <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"></script>         
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>          -->
+        <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>         
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>          -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+
+		<title>Welcome to Chives</title>
+        <link rel="stylesheet" href="../static/css/css.css">
+    </head> 
+
+    <body>
+    <div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-dark ">
+  			<a class="navbar-brand" href="#"><img width="90px" height="auto" src="../static/images/logo.svg" alt=""></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    			<span class="navbar-toggler-icon"></span>
+  			</button>
+
+  			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+      				<li class="nav-item active">
+        				<a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+      				</li>
+      				<li class="nav-item dropdown">
+        				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          					策略
+        				</a>
+        				<div class="dropdown-menu bg-transparent" aria-labelledby="navbarDropdown">
+          					<a class="dropdown-item" href="#">传统策略</a>
+          					<a class="dropdown-item" href="#">AI策略</a>
+          					<div class="dropdown-divider"></div>
+          					<a class="dropdown-item" href="#">自定义策略</a>
+        				</div>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="#">回测</a>
+      				</li>
+      				<li class="nav-item">
+        				<a class="nav-link" href="#">我的</a>
+      				</li>
+     				<li class="nav-item">
+        				<a class="nav-link" href="#">帮助</a>
+      				</li>
+    			</ul>
+				<!-- 燃烧吧 -->
+				<div class="firefont">    
+ 					<svg viewBox="0 0 530 500">
+  						<pattern 
+	        		   			id="p-fire" 
+	        		   			viewBox="30 100 186 100"
+	        		   			patternUnits="userSpaceOnUse"
+	        		   			width="56" height="60"
+	        		   			x="-0" y="50">
+		
+    							<image xlink:href="../static/images/fire.gif" width="256" height="300"/>
+  							</pattern>
+	
+	  					<text text-anchor="middle"
+	    	    					x="50%"
+	    	    					y="7%"
+	    	    					class="text">
+	    						Quant The World!
+	  					</text>
+					</svg>
+				</div>
+			</div>   
+		</nav>
+	</div>
+	
+	<!-- 欢迎文字 -->
+	<div class="title">
+		<h2>Welcome to <img width='100px' src="../static/images/logoword.svg" alt=""></h2>
+	</div>   
+
+
+	 
+	<div  class='container-fluid clearfix' id='carousel-wrapper'>
+		<div class="row">
+			<div class="col-md-8 offset-1">
+				<!-- 轮播信息 -->
+	  			<div id="carouselExampleCaptions" class="carousel slide w-100" data-ride="carousel">
+	    			<ol class="carousel-indicators">
+	    			  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+	    			  <li data-target="#carouselExampleCaptions" data-slide-to="1" class=""></li>
+	    			  <li data-target="#carouselExampleCaptions" data-slide-to="2" class=""></li>
+	    			</ol>
+				    <div class="carousel-inner">
+				      	<div class="carousel-item active">
+				      		<div class="row d-flex justify-content-center">
+				      			<div class="col-sm-3 offset-2">
+				      				<img class="d-block w-75" data-src="" alt="Second slide" src="../static/images/greenchives.svg" data-holder-rendered="true">
+				      			</div>
+								<div class="col-sm-7 align-self-center text-light">
+									<p>`R_i = R_f + \beta_i(R_m-R_f)`<br><br>
+									`\arg\min_{\theta}\frac{1}{N}\Sigma_{i}L(y_i,f(x_i;\theta))+\lambda\Phi(\theta)`</p>
+								</div>
+				      		</div>
+				    	</div>
+				     	<div class="carousel-item">
+				      		<div class="row justify-content-center" >
+								<div class="col-sm-7 offset-sm-2 embed-responsive ">
+  									<iframe class="embed-responsive-item" src="../static/images/kline.html"></iframe>
+								</div>
+				      			<div class="col-sm-3">
+				      				<img class="d-block w-75" data-src="" alt="Second slide" src="../static/images/bluechives.svg" data-holder-rendered="true">
+				      			</div>
+				      		</div>
+				      	</div>
+				      	<div class="carousel-item">
+							<div class="row d-flex justify-content-center">
+				      			<div class="col-sm-3 offset-2">
+				      			<img class="d-block w-75" data-src="" alt="Second slide" src="../static/images/brownchives.svg" data-holder-rendered="true">
+				      			</div>
+								<div class="col-sm-7 align-self-center">
+									<p>Refuse to be reaped!<br><br>
+									Be a different Chinese leek!</p>
+								</div>
+				      		</div>
+				      	</div>	
+	    			</div>
+					<a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+					  	<!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+					  	<!-- <span class="sr-only">Previous</span> -->
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+					  	<!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+					  	<!-- <span class="sr-only">Next</span> -->
+					</a>
+				</div>
+			
+				<!-- 线条 -->
+				<div class="flex-container" id='lines-box'>
+					<hr>
+					<hr id='line1'>
+					<hr id="line2">
+					<hr id='slash1'>
+					<hr id='slash2'>
+					<hr id="vertical-line1">
+					<hr id="vertical-line2">
+				</div>
+				<div class="row">				
+					<div class="col-sm-7 offset-3">
+						<!-- 搜索框 -->
+						 <form class="form-inline" id='search-bar'>
+ 							 <div class="input-group">
+ 								<div class="input-group-prepend">
+ 							   		<span class="input-group-text bg-transparent text-white border border-info" id="basic-addon1">biu 一下~</span>
+ 								</div>
+ 									<input type="text" class="form-control bg-transparent" placeholder="stock/strategy">
+  								<div class="input-group-append">
+    								<button class="btn btn-outline-info" type="submit">
+    				     				求知
+    					   			</button>    
+  								</div>
+							</div>
+						</form>
+					</div>
+					<div class="col-sm-2">
+						<!-- mouse -->
+						<img src="../static/images/mouse.svg" alt="" id='mouse'>
+					</div>
+				</div>
+			</div>
+			
+			<!-- 第二列的列表组 -->
+			<div class="col-md-3 ml-auto">
+				<!--<ul class="list-group list-group-flush">-->
+  					<!--<li class="list-group-item pt-2 m-0"><code>#include&lt;iostream&gt;</code></li>-->
+  					<!--<li class="list-group-item pt-2 m-0"><code>using namespace std;</code></li>-->
+  					<!--<li class="list-group-item pt-2 m-0"><code>int main {</code></li>-->
+  					<!--<li class="list-group-item pt-2 m-0"><code>&nbsp;&nbsp;cout << 'Hello Chives!'</code></li>-->
+  					<!--<li class="list-group-item pt-2 m-0"><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<< endl;</code></li>-->
+  					<!--<li class="list-group-item pt-2 m-0"><code>}</code></li>-->
+  					<!--&lt;!&ndash; <li class="list-group-item p-2 m-1"><code></code></li> &ndash;&gt;-->
+				<!--</ul>-->
+
+				<ul class="list-group list-group-flush" style="color:#e83e8c;font-size:15px;">
+  					<li class="list-group-item pt-2 m-0 pl-0" style="text-align:center;"> 特别栏目</li>
+  					<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:3em;">技术技术不行，财务财务不精！！！ </li>
+  					<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:3em;">要工作没工作，要女朋友没女朋友！！！ </li>
+  					<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:3em;">除了偶尔惦记下别人早ojbk的CPA！！！</li>
+  					<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:3em;">你连个财务人的样子都快没有了！！！ </li>
+  					<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:3em;">一天到晚就知道东搞搞西搞搞 ！！！ </li>
+					<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:3em;">再不看CPA，你今年  <b> 又 废 了 ！！！</b></li>
+				</ul>
+				<!--<ul class="list-group list-group-flush" style="color:#e83e8c;font-size:15px;">-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0" style="text-align:center;">README</li>-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0" style="text-indent:2em;">This is a personal planning project </li>-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0">that combines traditional strategies with AI </li>-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0">strategies.This project is primarily aimed to  </li>-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0">impove skills ,&nbsp;although I always want to </li>-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0">build a light , easy-to-use quantitative APP </li>-->
+  					<!--<li class="list-group-item pt-2 m-0 pl-0">from two years ago.</li>-->
+					<!--<li class="list-group-item p-2 m-0 pl-0" style="text-indent:2em;">Now have a try !</li>-->
+				<!--</ul>-->
+
+				<!-- 登录注册按钮 -->
+				<div class="login-bar float-right">
+        			<div class="svg-wrapper"> 
+        		    	<svg height="40" width="100"> 
+        		        	<rect id="shape" height="40" width="100"/>
+        		     		<div class='login-btn'><a href="#">登录</a></div>
+        		    	</svg>             
+        			</div>         
+        			<!--Next button -->         
+        			<div class="svg-wrapper"> 
+        		    	<svg height="40" width="100"> 
+        		        	<rect id="shape" height="40" width="100"/>
+        		        	<div class='login-btn'><a href="#">注册</a></div> 
+        		    	</svg>             
+        			</div>         
+    			</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- footer -->
+	<!-- <div id="footer" class="container">
+		<nav class="navbar navbar-default navbar-fixed-bottom">
+    	<div class="navbar-inner navbar-content-center">
+        	<p class="text-muted" >
+           		<span><a href=""><img src="./SVG/logo.svg" alt=""></a> &copy;ysj.</span><span> Powered By <a href="">Django</a>.</span>
+        	</p>
+    	</div>
+		</nav>
+	</div> -->
+
+	<div class="footer fixed-bottom">
+        <div class="logo">
+        	<a href=""><img src="../static/images/logo.svg" alt=""></a>
+        </div>
+		<div class="copyright">
+			<p class="text-muted">&copy;ysj. Powered By Django.</p>
+		</div>
+	</div>
+</body> 

@@ -1,0 +1,224 @@
+/*page_setting*/
+body {
+  background-color: #282923;
+  font-family: 'Microsoft Yahei'; /*'SimHei'; */
+  /*font-size: 20px;*/
+}
+
+/*navbar*/
+.dropdown-item{
+  color: white;
+}
+
+/*燃烧字体*/
+.firefont
+{
+  /*position:relative; */
+  width:500px;
+  height: 30px;
+  /*top:10px;*/
+  /*left:100px;*/
+}
+
+.text {
+    fill: url(#p-fire);
+
+    /*stroke: #330000;*/
+    /*stroke-width: 8;*/
+    /*stroke-opacity: .5;*/
+    font: 2em Open Sans, Impact;
+    margin: auto;
+}
+
+
+/*welcome Chives*/
+.title h2{
+  text-align: center;
+  color: #fbfdf9;
+  font-family: monospace;
+}
+
+
+/*轮播界面*/
+/*#carousel-wrapper {
+  position: relative;
+  width:1000px;
+  left: 150px;
+}*/
+
+#carouselExampleCaptions{
+  /*margin-left: 150px;*/
+  /*max-width: 1000px;*/
+  height: 380px;
+  outline-color:gray;
+  outline-style: solid;
+  box-shadow:0 0 5px white;
+}
+
+.carousel-item img {
+  width:100px;
+  height: 300px;
+}
+.carousel-item p{
+  color:#28FF28;
+  font-size: 25px;
+}
+
+/*列表组*/
+.list-group-item{
+  background-color: transparent;
+  border-color: gray;
+  border-style: dashed;
+}
+.list-group-item pre{
+  color: white;
+}
+
+
+/*lines and rotate*/
+
+.flex-container {
+  display: flex;   
+  position: relative;
+  width:70%;
+  margin-top: 15%;
+}
+
+
+hr{
+  position: absolute;
+  width: 85%;
+  height: 1px;
+  background-color:#808080;
+  margin-top: -8%;
+  margin-left: 30%;
+}
+
+#vertical-line1{
+  margin-top:-15%;
+  margin-left:59%;
+  width: 12%;
+  transform: rotate(90deg);
+}
+
+#vertical-line2{
+  margin-top:-15%;
+  margin-left:72%;
+  width: 12%;
+  transform: rotate(90deg);
+}
+
+#line1{
+  width:34%;
+  margin-top:-15%;
+  margin-left:31%;
+}
+
+#line2{
+  width: 34%;
+  margin-top: -15%; 
+  margin-left: 78%
+}
+
+#slash1{
+  margin-top:2%;
+  margin-left: -10%;
+  width: 50%;
+  transform: rotate(110deg);
+}
+
+
+#slash2{
+  margin-top:0%;
+  margin-left:110%;
+  width: 50%;
+  transform: rotate(60deg);
+}
+
+
+#search-bar{
+  margin-left: 40px;
+}
+
+#mouse{
+  width:100px; 
+  height:200px; 
+  transform: rotate(-10deg) rotateX(40deg);
+  margin-top:-50px;
+  margin-left: -60px;
+}
+
+/*login-bar*/
+.login-bar{
+  margin-top: 220px;
+}
+.login-btn {
+  margin-top: -35px;
+  text-align: center;
+}
+
+.login-btn a {
+  color:white;
+}
+
+
+/*login-btn settings*/
+.svg-wrapper {
+  margin-top: 0;
+  position: relative;
+  width: 100px;
+  /*make sure to use same height/width as in the html*/
+  height: 40px;
+  display: inline-block;
+  border-radius: 3px;
+  margin-left: 5px;
+  margin-right: 5px
+}
+
+#shape {
+  stroke-width: 6px;
+  fill: transparent;
+  stroke: #009FFD;
+  stroke-dasharray: 85 400;
+  stroke-dashoffset: -150;
+  transition: 1s all ease;
+}
+
+.svg-wrapper:hover #shape {
+  stroke-dasharray: 50 0;
+  stroke-width: 3px;
+  stroke-dashoffset: 0;
+  stroke: #06D6A0;
+}
+
+
+/*footer*/
+
+.footer{
+  /*top:-200px;*/
+  /*left:520px;*/
+
+}
+.footer img{
+  width: 150px;
+  height: 80px;
+}
+
+.copyright{
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

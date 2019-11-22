@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f66bf8f-ba33-4203-b298-391c06180c60" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../学习笔记/SQL必知必会【SQL】/SQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/../学习笔记/SQL必知必会【SQL】/SQL.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../学习笔记/结构方程模型SEM/结构方程模型：Amos实务进阶_13237143.pdz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/帮同学解决数据困难【Python】/企业现金日记账汇总整理【ShanXue】/shanxue.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/帮同学解决数据困难【Python】/利用正则表达式处理exel简历信息【Lina】/.ipynb_checkpoints/Lina-party(Regex)-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/帮同学解决数据困难【Python】/利用正则表达式处理exel简历信息【Lina】/.ipynb_checkpoints/test-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/帮同学解决数据困难【Python】/利用正则表达式处理exel简历信息【Lina】/Lina-party(Regex).ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/帮同学解决数据困难【Python】/利用正则表达式处理exel简历信息【Lina】/test.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/帮同学解决数据困难【Python】/填充首尾时间点并扩展时间段【HuangChong】/hc.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/.ipynb_checkpoints/source code classifed-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/.ipynb_checkpoints/sumarry3.py-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/.ipynb_checkpoints/summary-instance-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/.ipynb_checkpoints/summary2-instance-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/source code classifed.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/summary-instance.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../实践项目/模型回归结果summary源代码整理与修改【Python】/summary2-instance.ipynb" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1079237118">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="1" />
+          <entry key="html" value="1" />
+          <entry key="md" value="1" />
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="1" />
+          <entry key="HTML" value="1" />
+          <entry key="Markdown" value="1" />
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="46" />
+          <entry key="html" value="873" />
+          <entry key="py" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="46" />
+          <entry key="HTML" value="873" />
+          <entry key="Python" value="5" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/chives/chives/templates/bootstrap/index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chives/chives/templates/bootstrap/static/css/css.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor>
+                <caret column="115" selection-end-column="315" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chives/chives/settings/base.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/chives/chives/settings/base.py" />
+        <option value="$PROJECT_DIR$/chives/chives/templates/bootstrap/static/css/css.css" />
+        <option value="$PROJECT_DIR$/chives/chives/templates/bootstrap/index/index.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="131" />
+    <option name="y" value="182" />
+    <option name="width" value="1009" />
+    <option name="height" value="765" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Chives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="chives" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f66bf8f-ba33-4203-b298-391c06180c60" name="Default Changelist" comment="" />
+      <created>1565197327235</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565197327235</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15852048" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3772538" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/chives/chives/settings/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="45" column="21" lean-forward="true" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor>
+            <caret column="115" selection-end-column="315" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chives/chives/templates/bootstrap/static/css/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chives/chives/templates/bootstrap/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="181" lean-forward="true" selection-start-line="181" selection-end-line="181" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#1;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
