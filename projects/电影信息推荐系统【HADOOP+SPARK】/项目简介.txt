@@ -1,0 +1,13 @@
+'''=================SparkRDD+SparkML:基于ALS算法的电影推荐引擎===============
+ * 一、运行环境
+ *     1.ubuntu-18.04
+ *     2.hadoop-3.0.1 + spark-2.3.1
+ *     3.jdk1.8 + python3.6
+       4.IDE：notebook+eclipse
+ * 二、数据来源
+ *    开源数据：从https://grouplens.org/datasets/movielens/上下载
+ * 三、项目简介
+ *   通过用户对电影的历史评分数据，利用sparkML的协同过滤算法和sparkRDD编程创建基于人和基于物的推荐引擎
+ * 四、执行过程
+ * recommend.py
+ '''
