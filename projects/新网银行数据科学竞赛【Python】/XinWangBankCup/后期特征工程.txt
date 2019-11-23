@@ -1,0 +1,29 @@
+重要特征两两相除：xgb->再次选择重要的特征加入模型
+重要特征两两相乘：xgb->再次选择重要特征加入模型 ，可以尝试取对数。
+LR+GBDT(产生特征）  LR+deep
+# from sklearn.preprocessing import PolynomialFeatures
+# from sklearn.pipeline import Pipeline
+
+# def polynomial_model(degree=1,**kwarg):
+#     polynomial_features = PolynomialFeatures(degree=degree,include_bias=False)
+#     logistic_regression = LogisticRegression(**kwarg)
+#     pipeline = Pipeline([
+#                          ("polynomial_fetures",polynomial_features),
+#                          ("logistic_regression",logistic_regression)
+#                         ])
+#     return pipeline
+
+# LR_model = polynomial_model(degree=2,penalty="l1")
+# start = time.clock()
+# LR_model.fit(train_x,train_y)
+# train_score = LR_model.score(train_x,train_y)
+# test_score = LR_model.score(test_x,test_y)
+# print("elaspe:",time.clock()-start,"\n",
+#       "train_score:",train_score,"\n",
+#       "test_score:",test_score)
+
+# logistic_regression = LR_model.named_steps['logistic_regression']
+# print("logistic model parameters shape:",logistic_regression.coef_.shape,"\n",
+#      "count of non-zero elements:",np.count_nonzero(logistic_regression.coef_))
+# y_pred_proba = LR_model.predict_proba(test_x)
+# y_pred_proba[y_pred_proba[:,1]>0.5]
