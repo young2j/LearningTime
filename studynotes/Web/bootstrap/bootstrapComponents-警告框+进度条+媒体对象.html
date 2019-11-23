@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content='width=device-width,initial-scale=1' charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	<title>bootstrapComponent-标签</title>
+</head>
+<body>
+	<p>-------------------------警告窗--------------------</p>
+	<div class="alert alert-success" role="alert">alert-success</div>
+	<div class="alert alert-info" role="alert">alert-info</div>
+	<div class="alert alert-warning" role="alert">
+		<a href="#" class="alert-link">alert-warning</a>
+	</div>
+	<div class="alert alert-danger alert-dismissible" role="alert">alert-danger 点击可关闭
+		<button class="close" type="button" data-dismiss="alert">&times;</button>
+	</div>
+	<!-- 给 <button> 元素添加 data-dismiss="alert" 属性->确保在所有设备上的正确行为 -->
+
+	<br>
+	<hr>
+	<p>----------------------------进度条-----------------------</p>
+	<div class='progress'>
+		<div class="progress-bar progress-bar-success" role="progressbar" style="width: 60%"  aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'></div>
+	</div>
+	<div class='progress'>
+		<div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" style="width: 60%"  aria-valuenow='60' aria-valuemin='0' aria-valuemax='100'>
+			60%
+		</div>
+	</div>
+	<!-- 在展示很低的百分比时，如果需要让文本提示能够清晰可见，可以为进度条设置 min-width 属性 -->
+	<div class="progress">
+  		<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;">
+    		0%
+  		</div>
+	</div>
+	<div class="progress">
+  		<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="2" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em; width: 2%;">
+    		2%
+  		</div>
+	</div>
+	<div class="progress">
+		<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:45%">
+		</div>
+	</div>
+	<div class="progress">
+  		<div class="progress-bar progress-bar-success" style="width: 35%"></div>
+  		<div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"></div>
+  		<div class="progress-bar progress-bar-danger" style="width: 10%"></div>
+	</div>
+	<p>------------------------媒体对象-------------------------</p>
+	<div class="media">
+		<div class="media-left media-top"><!--  media-middle media-bottom -->
+			<a href="#"><img src="./shajia.jpg" alt="" class="media-object" style="width:60px;height: 60px"></a>
+		</div>
+		<div class="media-body">
+			<h2 class="media-heading">天魔降伏</h2>
+			<p>辣椒粉垃圾四点零分卡了深刻的经过历史的发神经大幅拉升就大幅拉升的肌肤...</p>
+		</div>
+	</div>
+	<div class="media">
+		<div class='media-body'>
+			<h2 class="media-heading">天舞宝轮</h2>
+			<p>按时发垃圾士大夫浪啦涉及到了附近的萨拉解放啦即使对方卢卡斯京东方拉克丝的积分...</p>
+		</div>
+		<div class="media-right">
+			<a href="#"><img src="./shajia.jpg" alt="" class="media-object" style="width:60px;height:60px;">
+			</a>
+		</div>
+	</div>
+	<br>
+	<hr>
+	<ul class="media-list">
+      <li class="media">
+        <div class="media-left">
+          <a href="#">
+            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="./shajia.jpg" data-holder-rendered="true" style="width: 64px; height: 64px;">
+          </a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading">Media heading</h4>
+          <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+          <!-- Nested media object -->
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="./shajia.jpg" style="width: 64px; height: 64px;">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Nested media heading</h4>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+              <!-- Nested media object -->
+              <div class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="./shajia.jpg" data-holder-rendered="true" style="width: 64px; height: 64px;">
+                  </a>
+                </div>
+                <div class="media-body">
+                  <h4 class="media-heading">Nested media heading</h4>
+                  Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Nested media object -->
+          <div class="media">
+            <div class="media-left">
+              <a href="#">
+                <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="./shajia.jpg" style="width: 64px; height: 64px;">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">Nested media heading</h4>
+              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+</body>
+</html>

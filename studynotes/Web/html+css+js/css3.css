@@ -1,0 +1,655 @@
+
+/*样式层叠优先级(低到高)：
+	1.浏览器缺省设置
+	2.外部样式表
+	3.内部样式表（位于<head> 标签内部）
+	4.内联样式（在HTML元素内部）*/
+
+/*选择器的优先级(低到高)[权重]：
+	1.通用选择器（*）
+	2.元素(类型)选择器 [1]
+	3.类选择器 [10]
+	4.属性选择器
+	5.伪类 
+	6.ID选择器 [100]
+	7.内联样式 [1000]
+
+!important 最优先使用，在优先级规则之外。
+*/
+
+============================== 选择器 ===================
+/*id选择器以#id表示*/
+#id{
+	color: black;
+	text-align: center;
+	font-family: monospace;
+}
+
+/*class选择器以.class表示，且有别于id选择器，它可以在多个元素中起作用*/
+p.center{
+	color: black;
+	text-align: center;
+	font-family: monospace;
+}
+
+
+/*分组选择器,以逗号分割：*/
+h1,h2,p { 
+	color:green; 
+}
+
+
+/*后代选择器以空格分割：*/
+div p { 
+background-color:yellow; 
+}
+
+/*子元素选择器以>分割：*/
+div>p { 
+background-color:yellow; 
+}
+
+/*相邻兄弟选择器，以+分割：*/
+div+p { 
+background-color:yellow; 
+}
+
+/*普通相邻兄弟选择器，以~分割：*/
+div~p { 
+background-color:yellow; 
+}
+
+/*属性选择器，以[]包围：*/
+[title] { 
+	color:blue; 
+}
+
+[title=w3cschool] { 
+	border:5px solid green; 
+}
+
+[title~=hello] { 
+	color:blue; 
+}
+
+[lang|=en] { 
+	color:blue; 
+}
+
+input[type="text"] { 
+	width:150px; 
+	display:block; 
+	margin-bottom:10px; 
+	background-color:yellow; 
+} 
+
+input[type="button"] { 
+	width:120px; 
+	margin-left:35px; 
+	display:block; 
+}
+==============================background========================
+div{
+	background-image:url('smiley.gif');
+	background-repeat:no-repeat; /*repeat;repeat-x;repeat-y;inherit*/
+	background-color: yellow; 
+	background-attachment: scroll; /*fixed;inherit;local;*/
+	background-position:left center;/* x% y% */
+	background-origin:content-box; /*padding-box;border-box;content-box;*/
+	background-clip: border-box; /*padding-box;content-box;*/
+	background-size: width height; /*length;percentage;cover;contain;*/
+	
+	background:bg-color bg-image position/ bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+}
+
+==============================text==============================
+p
+{
+	color: rgb(255,0,0);
+	text-align: justify; /*两端对齐*/ /*left;right;center;*/
+	text-justify: auto; /*inter-word|inter-ideograph|inter-cluster|distribute|kashida|trim;*/
+	
+	text-decoration: line-through; /*overline;underline;none;blink*/
+	text-decoration-color:orange;
+	text-decoration-style:dashed;
+	text-transform: uppercase; /*lowercase;capitalize;*/
+	text-indent: 50px;
+	text-shadow: 2px 2px #FF0000; /*文字阴影效果*/
+	text-overflow: clip; /*ellipsis;string;*/
+	text-outline: thickness blur color; /*暂不支持*/
+	text-wrap:normal; /*none|unrestricted|suppress;*/ /*暂不支持*/
+
+
+	word-spacing: 30px;  /*字间距默认为normal，与0等同*/
+	letter-spacing: 2px; /*字符间距*/
+	line-height: 100%;  /*大多数浏览器默认行距为110%-170%*/
+	direction: rtl; /*书写方向从右到左*/
+	white-space: nowrap; /*禁用文字环绕*/
+	vertical-align: text-bottom; /*text-top;文字与图像的对齐方式*/
+	unicode-bidi: normal; /*embed;bidi-override;initial;inherit;设置或返回文本是否被重写 */
+	word-wrap: break-word; /*normal*/
+	word-break: normal|break-all|keep-all;
+
+	hanging-punctuation: none;  /*first|last|allow-end|force-end;*/ /*指定一个标点符号是否可能超出行框*/ /*暂不支持*/
+	punctuation-trim: none; /*start|end|allow-end|adjacent;*/ /*指定一个标点符号是否要去掉*/ /*暂不支持*/
+}
+
+==============================font===============================
+p
+{
+	font-family: "Times New Roman",Times,serif;
+	font-style: normal; /*italic;oblique;*/	
+	font-size: 14px;
+	font-size: 1em; /*1em的默认大小是16px,根据父元素文字大小而已*/
+	font-size: 100%;
+	font-size-adjust: 0.58; /*only firefox support now*/
+
+	font-weight: normal; /*lighter;bold;900;*/
+	font-variant: normal; /*small-caps;字体变化*/
+	font-stretch: wider; /*narrower|ultra-condensed|extra-condensed|condensed|semi-condensed|normal|semi-expanded|expanded|extra-expanded|ultra-expanded|*/
+	font:italic bold 12px/30px Georgia, serif;
+}
+
+
+===========================list===========================
+ul{
+	list-style-type: circle; /*none;disc;circle;square;demical;upper-roman;lower-roman;upper-alpha;lower-alpha;*/
+	list-style-image: url('path.gif');
+	list-style-position: 0px 5px; /*inside;outside*/
+	list-style:square 0px 5px url("path.gif");
+}
+
+===========================table==========================
+table{
+	border-collapse: collapse; /*separate;*//*是否合并边框*/
+	border-spacing: 10px 50px;
+	caption-side: top; /*bottom;*/
+	empty-cells: hide; /*show;*/
+	table-layout: auto;  /*fixed;*/
+}
+==========================dimension尺寸=====================
+p{
+	height: ;
+	line-height: ;
+	max-height: ;
+	max-width: ;
+	min-height: ;
+	min-width: ;
+	width: ;
+}
+
+===========================color==========================
+div
+{
+	opacity:0.5; /*不透明度*/
+}
+
+=============================position======================
+
+img
+{
+	position:absolute; /*relative;fixed;static;*/
+	top:5px;
+	bottom:5px;
+	left:5px;
+	right: 5px;
+	clear: both;  /*left;right;none; 设置元素浮动*/
+	clip:rect(0px,60px,200px,0px); /*裁剪*/
+	cursor:wait;
+	display: inline;
+	float: right;
+	visibility: visible; /*hidden;collapse;*/
+	z-index: auto;  /*number;*//*设置元素的堆叠顺序*/
+
+}
+
+/*cursor：
+url			需使用的自定义光标的 URL。注释：请在此列表的末端始终定义一种普通的光标，以防没有由 URL 定义的可用光标。
+default		默认光标（通常是一个箭头）
+auto		默认。浏览器设置的光标。
+crosshair	光标呈现为十字线。
+pointer		光标呈现为指示链接的指针（一只手）
+move		此光标指示某对象可被移动。
+e-resize	此光标指示矩形框的边缘可被向右（东）移动。
+ne-resize	此光标指示矩形框的边缘可被向上及向右移动（北/东）。
+nw-resize	此光标指示矩形框的边缘可被向上及向左移动（北/西）。
+n-resize	此光标指示矩形框的边缘可被向上（北）移动。
+se-resize	此光标指示矩形框的边缘可被向下及向右移动（南/东）。
+sw-resize	此光标指示矩形框的边缘可被向下及向左移动（南/西）。
+s-resize	此光标指示矩形框的边缘可被向下移动（北/西）。
+w-resize	此光标指示矩形框的边缘可被向左移动（西）。
+text		此光标指示文本。
+wait		此光标指示程序正忙（通常是一只表或沙漏）。
+help		此光标指示可用的帮助（通常是一个问号或一个气球）。*/
+
+/*display:
+none				此元素不会被显示。
+block				此元素将显示为块级元素，此元素前后会带有换行符。
+inline				默认。此元素会被显示为内联元素，元素前后没有换行符。
+inline-block		行内块元素。（CSS2.1 新增的值）
+list-item			此元素会作为列表显示。
+run-in				此元素会根据上下文作为块级元素或内联元素显示。
+compact				CSS 中有值 compact，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。
+marker				CSS 中有值 marker，不过由于缺乏广泛支持，已经从 CSS2.1 中删除。
+table				此元素会作为块级表格来显示（类似 <table>），表格前后带有换行符。
+inline-table		此元素会作为内联表格来显示（类似 <table>），表格前后没有换行符。
+table-row-group		此元素会作为一个或多个行的分组来显示（类似 <tbody>）。
+table-header-group	此元素会作为一个或多个行的分组来显示（类似 <thead>）。
+table-footer-group	此元素会作为一个或多个行的分组来显示（类似 <tfoot>）。
+table-row			此元素会作为一个表格行显示（类似 <tr>）。
+table-column-group	此元素会作为一个或多个列的分组来显示（类似 <colgroup>）。
+table-column		此元素会作为一个单元格列显示（类似 <col>）
+table-cell			此元素会作为一个表格单元格显示（类似 <td> 和 <th>）
+table-caption		此元素会作为一个表格标题显示（类似 <caption>）
+inherit				规定应该从父元素继承 display 属性的值。*/
+
+
+=========================padding内边距======================
+p{
+	padding:10px 5px 15px 20px;
+	padding:10px 5px 15px;
+	padding:10px 5px;
+	padding:10px;
+	padding-left: ;
+	padding-right: ;
+	padding-bottom: ;
+	padding-top: ;
+}
+
+============================margin外边距=========================
+div{
+	margin:0px; /*auto;%;*/
+	margin-left: auto; /*auto;%;*/
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-top: auto;
+}
+==============================border=======================
+p{
+	border-top-color: ;  /*top;bottom;left;right;*/
+	border-top-style:dotted; /*none;hidden;dotted;dashed;solid;double;groove;ridge;inset;outset;inherit;*/
+	border-top-width: ;
+	border-top: ; /*简写*/
+	border-color: ;
+	border-style: ;
+	border-width: ;
+
+	border-bottom-right-radius: 2em;
+	border-radius: ;
+
+	border-image-outset: 30 30;
+	border-image-repeat: repeat; /*streth;round;space;initial;inherit;*/
+	border-image-source: url();
+	border-image-slice: 50% 50%;  /*%;fill;*/
+	border-image-width: 50px;
+	
+	-webkit-border-image:url(border.png) 30 30 round; /* Safari 5 */
+	-o-border-image:url(border.png) 30 30 round; /* Opera */
+	border-image:url(border.png) 30 30 round; 
+
+	box-shadow: h-shadow v-shadow blur spread color inset;
+
+
+	outline-color: ;
+	outline-style: ; /*轮廓*/
+	outline-width: ;
+	outline:#00FF00 dotted thick;
+}
+
+==============================multi-column=========================
+div{
+	column-count:3;
+	column-fill:auto;	/*balance;*/
+	column-gap: 40px;
+	column-rule-width: 4px;
+	column-rule-style: outset; /*none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset;*/
+	column-rule-color: #ff00ff;
+	column-rule: 4px outset #ff00ff;
+	column-span: 1|all;
+	column-width: auto;
+	columns: column-width column-count;
+
+
+	-moz-column-count:3; /* Firefox */
+	-webkit-column-count:3; /* Safari and Chrome */
+	
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px; 
+	    
+	-webkit-column-rule: 4px outset #ff00ff; 
+	-moz-column-rule: 4px outset #ff00ff;
+	
+}
+===============================print===============================
+div{
+	page-break-after: auto; /*always;avoid;left;right;inherit;*/
+	page-break-before: ;
+	page-break-inside: ;
+}
+
+================================box model===========================
+div{
+	overflow-x: visible; /*hidden;scroll;auto;no-display;no-content;*/
+	overflow-y: ;
+	overflow: ;
+	overflow-style:auto; /*scrollbar;panner;move;marquee; 目前均不支持。*/
+
+	rotation point:left top; /*x% y%*/
+	rotation:180deg; /*目前不支持rotation*/
+}
+
+=========================flexible box(new)=====================
+div:nth-of-type(2){
+	flex-grow: 3; /*initial;inherit;*//*让第二个元素为其他元素的三倍*/
+	flex-shrink: 3; /*让第二个元素收缩到其他元素的三分之一*/
+	flex-basis: 80px;  /*number|auto|initial|inherit;*//*设置第二个弹性盒元素的初始长度为 80 像素*/
+	flex:grow shrink basis;
+}
+div{
+	display:flex;
+	flex-direction:row; /*row-reverse|column|column-reverse|initial|inherit*/
+	flex-wrap: nowrap; /*wrap|wrap-reverse|initial|inherit*/
+	flex-flow: flex-direction flex-wrap|initial|inherit;
+	align-content: stretch; /*center|flex-start|flex-end|space-between|space-around|initial|inherit;*/
+	align-items: stretch; /*center|flex-start|flex-end|baseline|initial|inherit;*/
+	align-self: auto; /*stretch|center|flex-start|flex-end|baseline|initial|inherit*/
+	justify-content:flex-start; /*flex-end|center|space-between|space-around|initial|inherit;*/
+}
+/*设置弹性盒对象元素的顺序：*/
+div#myRedDIV {order:2;}
+div#myBlueDIV {order:4;}
+div#myGreenDIV {order:3;}
+div#myPinkDIV {order:1;}
+
+=======================flexible box(old)========================
+div
+{
+	width:350px;
+	height:100px;
+	border:1px solid black;
+	box-flex-group: integer; /*目前均不支持*/
+	box-lines: single|multiple; /*目前均不支持*/
+	box-ordinal-group: integer; /*目前均不支持*/
+	box-orient: horizontal|vertical|inline-axis|block-axis|inherit; /*目前均不支持*/
+	box-pack: start|end|center|justify; /*目前均不支持*/
+
+/* Internet Explorer 10 */
+	display:-ms-flexbox;
+	-ms-flex-direction:row-reverse;
+	-ms-flex-align:center;
+	-ms-box-flex:1.0;
+
+/* Firefox */
+	display:-moz-box;
+	-moz-box-direction:reverse;
+	-moz-box-align:center;
+	-moz-box-flex:1.0;
+
+/* Safari, Opera, and Chrome */
+	display:-webkit-box;
+	-webkit-box-direction:reverse; 
+	-webkit-box-align:center; /*normal|reverse|inherit;*/
+	-webkit-box-flex:1.0;
+
+/* W3C */
+	display:box;
+	box-direction:reverse;
+	box-align:center;  /*start|end|center|baseline|stretch;*/
+	box-flex:1.0;
+}
+
+====================animation=================
+div
+{
+	width:100px;
+	height:100px;
+	background:red;
+	position:relative;
+	animation-name: mymove;
+	animation-duration: 3s;
+	/*animation:mymove 3s;*/
+	animation-delay: 2s;
+	animation-iteration-count:3;
+	animation-direction: alternate; /*先执行一遍动画，然后再反向执行一遍动画*/
+	animation-play-state:paused; /*暂停动画*/
+	
+	/* Safari and Chrome */
+	-webkit-animation:mymove 3s;
+	-webkit-animation-iteration-count:3;
+	-webkit-animation-direction:alternate;
+	-webkit-animation-play-state:paused;
+}
+
+@keyframes mymove
+{
+	from {top:0px;}
+	to {top:200px;}
+}
+
+@-webkit-keyframes mymove /* Safari and Chrome */
+{
+	from {top:0px;}
+	to {top:200px;}
+}
+
+========================2D/3Dtransform============================
+div{
+	transform: rotate(45deg);
+	transform-origin:20% 40%;
+	transform-style: preserve-3d;
+	perspective: 500;
+	perspective-origin: 10% 10%;
+	backface-visibility:hidden;
+	
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-ms-transform-origin:20% 40%; /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari and Chrome */
+	-webkit-transform-origin:20% 40%; /* Safari and Chrome */
+	-webkit-transform-style: preserve-3d; /* Safari and Chrome */
+	-webkit-perspective: 500; /* Safari and Chrome */
+	-webkit-perspective-origin: 10% 10%; /* Safari and Chrome */
+	-webkit-backface-visibility:hidden; /* Chrome and Safari */
+	-moz-backface-visibility:hidden; /* Firefox */
+	-ms-backface-visibility:hidden; /* Internet Explorer */
+}
+
+/*transform:
+值							描述
+none						定义不进行转换。
+matrix(n,n,n,n,n,n)			定义 2D 转换，使用六个值的矩阵。
+matrix3d(n,n,n,n,n,n,n,n,	定义 3D 转换，使用 16 个值的 4x4 矩阵。
+	n,n,n,n,n,n,n,n)	
+translate(x,y)				定义 2D 转换。
+translate3d(x,y,z)			定义 3D 转换。
+translateX(x)				定义转换，只是用 X 轴的值。
+translateY(y)				定义转换，只是用 Y 轴的值。
+translateZ(z)				定义 3D 转换，只是用 Z 轴的值。
+scale(x[,y]?)				定义 2D 缩放转换。
+scale3d(x,y,z)				定义 3D 缩放转换。
+scaleX(x)					通过设置 X 轴的值来定义缩放转换。
+scaleY(y)					通过设置 Y 轴的值来定义缩放转换。
+scaleZ(z)					通过设置 Z 轴的值来定义 3D 缩放转换。
+rotate(angle)				定义 2D 旋转，在参数中规定角度。
+rotate3d(x,y,z,angle)		定义 3D 旋转。
+rotateX(angle)				定义沿着 X 轴的 3D 旋转。	 
+rotateY(angle)				定义沿着 Y 轴的 3D 旋转。
+rotateZ(angle)				定义沿着 Z 轴的 3D 旋转。
+skew(x-angle,y-angle)		定义沿着 X 和 Y 轴的 2D 倾斜转换。
+skewX(angle)				定义沿着 X 轴的 2D 倾斜转换。
+skewY(angle)				定义沿着 Y 轴的 2D 倾斜转换。
+perspective(n)				为 3D 转换元素定义透视视图。*/
+
+=========================transition==============================
+div 
+{ 
+	transition-property:width; 
+	transition-duration: 5s; 
+	transition-timing-function: linear;  /*ease|ease-in|ease-out|ease-in-out|cubic-bezier(n,n,n,n);*/
+	transition-delay: 2s;
+	
+	-moz-transition-property: width; /* Firefox 4 */ 
+	-webkit-transition-property:width; /* Safari and Chrome */ 
+	-o-transition-property:width; /* Opera */ 
+	-webkit-transition-duration: 5s; /* Safari */ 
+	-webkit-transition-timing-function: linear; /* Safari and Chrome */ 
+	-webkit-transition-delay: 2s; /* Safari */
+} 
+
+div:hover {width:300px;}
+
+
+============================user-interface===========================
+div
+{
+appearance:button; /*normal|icon|window|button|menu|field;*/
+box-sizing:border-box;
+
+-moz-appearance:button; /* Firefox */
+-webkit-appearance:button; /* Safari and Chrome */
+-moz-box-sizing:border-box; /* Firefox */
+}
+
+img{
+	content:icon;
+	icon:url(imgicon.png); /*没有主流浏览器支持*/
+}
+
+
+button#b1
+{
+	top:20%;left:25%;
+	nav-index:1; /*tab顺序*/
+	nav-right:#b2;nav-left:#b4;
+	nav-down:#b2;nav-up:#b4;
+}
+
+div
+{
+	border:2px solid black;
+	outline:2px solid red;
+	outline-offset:15px; /*指定外边框边缘的轮廓*/
+	resize: none|both|horizontal|vertical; /*允许用户调整大小*/
+}
+
+
+============================content properties====================
+body
+{
+	counter-reset:section;
+}
+
+h1
+{
+	counter-reset:subsection;
+}
+
+h1:before
+{
+	counter-increment:section;
+	content:"Section " counter(section) ". ";
+}
+
+h2:before 
+{
+	counter-increment:subsection;
+	content:counter(section) "." counter(subsection) " ";
+}
+
+/*quotes属性设置嵌套引用的引号类型:*/
+q:lang(en)
+{
+	quotes: "ï¿½" "ï¿½" "'" "'";
+}
+
+
+
+============================hyperlink(均不支持)=======================
+a{
+	target-name: current|root|parent|new|modal|name;
+	target-new: window|tab|none;
+	target-position:;
+}
+
+
+===========================grid(均不支持)============================= 
+div
+{ 
+	grid-columns:50% * * 200px; /*length|%|none|inherit;*/
+	grid-rows:100px (30px 60px); /*length|%|none|inherit;*/
+}
+
+
+/*=======================line box=================================
+
+属性							说明	CSS
+alignment-adjust			允许更精确的元素的对齐方式
+alignment-baseline			其父级指定的内联级别的元素如何对齐
+baseline-shift				允许重新定位相对于dominant-baseline的dominant-baseline
+dominant-baseline			指定scaled-baseline-table
+drop-initial-after-adjust	设置下拉的主要连接点的初始对齐点
+drop-initial-after-align	校准行内的初始行的设置就是具有首字母的框使用初级连接点
+drop-initial-before-adjust	设置下拉的辅助连接点的初始对齐点
+drop-initial-before-align	校准行内的初始行的设置就是具有首字母的框使用辅助连接点
+drop-initial-size			控制局部的首字母下沉
+drop-initial-value			激活一个下拉式的初步效果	
+inline-box-align			设置一个多行的内联块内的行具有前一个和后一个内联元素的对齐
+line-stacking				一个速记属性设置line-stacking-strategy, line-stacking-ruby,和line-stacking-shift属性
+line-stacking-ruby			设置包含Ruby注释元素的行对于块元素的堆叠方法
+line-stacking-shift			设置base-shift行中块元素包含元素的堆叠方法
+line-stacking-strategy		设置内部包含块元素的堆叠线框的堆叠方法	
+text-height					行内框的文本内容区域设置block-progression维数*/
+
+/*============================媒体页面内容属性====================
+属性						说明				
+bookmark-label			指定书签的标签
+bookmark-level			指定了书签级别
+bookmark-target			指定了书签链接的目标
+float-offset			在相反的方向推动浮动元素，他们一直具有浮动
+hyphenate-after			指定一个断字的单词断字字符后的最少字符数
+hyphenate-before		指定一个断字的单词断字字符前的最少字符数
+hyphenate-character		指定了当一个断字发生时，要显示的字符串
+hyphenate-lines			表示连续断字的行在元素的最大数目
+hyphenate-resource		外部资源指定一个逗号分隔的列表，可以帮助确定浏览器的断字点
+hyphens					设置如何分割单词以改善该段的布局
+image-resolution		指定了正确的图像分辨率
+marks					将crop and/or cross标志添加到文档
+string-set*/
+
+/*===========================字幕(Marquee) 属性==================
+属性					说明	
+marquee-direction	设置内容移动的方向	
+marquee-play-count	设置内容移动多少次	
+marquee-speed		设置内容滚动的速度有多快	
+marquee-style		设置内容移动的样式*/
+
+/*=============================页面媒体(Paged Media) 属性==============
+属性					说明
+fit					如果其宽度和高度属性都不是auto给出一个提示，如何大规模替换元素	
+fit-position		判定方框内对象的对齐方式	
+image-orientation	指定用户代理适用于图像中的向右或顺时针方向的旋转	
+page				指定一个元素应显示的页面的特定类型	
+size				指定含有BOX的页面内容的大小和方位*/
+
+/*==========================语音(Speech)属性==========================
+属性					说明	
+mark				缩写属性设置mark-before和mark-after属性	
+mark-after			允许命名的标记连接到音频流	
+mark-before			允许命名的标记连接到音频流	
+phonemes			指定包含文本的相应元素中的一个音标发音	
+rest				一个缩写属性设置rest-before和rest-after属性	
+rest-after			一个元素的内容讲完之后，指定要休息一下或遵守韵律边界	
+rest-before			一个元素的内容讲完之前，指定要休息一下或遵守韵律边界	
+voice-balance		指定了左，右声道之间的平衡	
+voice-duration		指定应采取呈现所选元素的内容的长度	
+voice-pitch			指定平均说话的声音的音调（频率）	
+voice-pitch-range	指定平均间距的变化	
+voice-rate			控制语速	
+voice-stress		指示着重力度	
+voice-volume		语音合成是指波形输出幅度*/
+
+/*===============================Ruby 属性=========================
+属性				说明	
+ruby-align		控制Ruby文本和Ruby基础内容相对彼此的文本对齐方式	
+ruby-overhang	当Ruby文本超过Ruby的基础宽，确定ruby文本是否允许局部悬置任意相邻的文本，除了自己的基础	
+ruby-position	它的base控制Ruby文本的位置	
+ruby-span		控制annotation 元素的跨越行*/

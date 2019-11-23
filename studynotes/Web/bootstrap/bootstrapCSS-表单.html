@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta name="viewport" content='width=device-width,initial-scale=1' charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	<title>bootstrapCSS-表单</title>
+</head>
+<body>
+	<!-- 所有设置了 .form-control 类的 <input>、<textarea> 和 <select> 元素都将被默认设置宽度属性为 width: 100%;。 -->
+	<!-- 将 label 元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。 -->
+	<form>
+		<div class="form-group">
+			<label for="email-input">Email:</label>
+			<input type="email" class="form-control" id="email-input" placeholder="email">
+		</div>
+		<div class="form-group">
+			<label for="passwd-input">Password:</label>
+			<input type="password" class="form-control" id="passwd-input" placeholder="password">
+		</div>
+		<div class="form-group">
+			<label for="file-input">Fileinput</label>
+			<input type="file" id="file-input">
+			<p type="help-block">here is help info</p>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox">check 
+			</label>
+		</div>
+		<button class="btn btn-default" type="submit">Submit</button>
+	</form>
+	
+	<br>
+	<hr>
+	<!-- 如果你没有为每个输入控件设置 label 标签，屏幕阅读器将无法正确识别 -->
+	<!-- 一些辅助技术提供label标签的替代方案，比如 aria-label、aria-labelledby 或 title 属性 -->
+	<!-- .sr-only可隐藏label -->
+	<form class="form-inline">
+			<div class="form-group">
+				<label for="name-input" class="sr-only">Name</label>
+				<input type="text" class="form-control" id="name-input" placeholder="Name">
+			</div>
+		<div class="form-group">
+			<label for="email-input">Email:</label>
+			<input type="email" class="form-control" id="email-input" placeholder="email">
+		</div>
+		<div class="form-group">
+			<label for="passwd-input">Password:</label>
+			<input type="password" class="form-control" id="passwd-input" placeholder="password">
+		</div>
+		<div class="form-group">
+			<label for="file-input">Fileinput</label>
+			<input type="file" id="file-input">
+			<p type="help-block">here is help info</p>
+		</div>
+		<button class="btn btn-default" type="submit">Submit</button>
+	</form>
+	<br>
+	<hr>
+	<form action="" class="form-inline">
+		<div class="form-group">
+			<label for="amount-input" class="sr-only">Amount</label>
+			<div class="input-group">
+				<div class="input-group-addon">$</div>
+				<input type="text" class="form-control" id="amount-input" placeholder="Amount">
+				<div class="input-group-addon">.00</div>
+			</div>
+		</div>
+		<button class="btn btn-primary" type='submit'>Transfer cash</button>
+	</form>
+	<br>
+	<hr>
+	<form action="" class="form-horizontal">
+		<div class="form-group">
+			<label for="email-input" class="col-sm-2 label-control">Email</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="email-input">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password-input" class="col-sm-2 lable-control">Password</label>
+			<div class="col-sm-10">
+				<input type="password" class="form-control" id="password-input">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="" class="col-sm-2 label-control">Contact</label>
+			<div class="col-sm-10">
+				<p class="form-control-static">1234567</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10 col-sm-offset-2">
+				<div class="checkbox">
+					<label><input type="checkbox">Remember</label>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-sm-10 col-sm-offset-2">
+				<button class="btn btn-default" type="submit">Sign in</button>
+			</div>
+		</div>
+	</form>
+	<br>
+	<hr>
+	<textarea  cols="30" rows="4" class="form-control" placeholder="文本域"></textarea>
+	<br>
+	<hr>
+	<div class="checkbox">
+		<label for=""><input type="checkbox">一般复选框</label>
+	</div>
+	<div class="checkbox checked">
+		<label for=""><input type="checkbox" checked>选中的复选框</label>
+	</div>
+	<div class='checkbox disabled'>
+		<label for=""><input type="checkbox" disabled>disabled复选框</label>
+	</div>
+
+	<div class="radio">
+		<label for=""><input type="radio">一般单选框</label>
+	</div>
+	<div class='radio checked'>
+		<label for=""><input type="radio" checked>选中的单选框</label>
+	</div>
+	<div class='radio disabled'>
+		<label for=""><input type="radio" disabled>disabled单选框</label>
+	</div>
+	<br>
+	<hr>
+	<label for="" class="checkbox-inline">
+		<input type="checkbox">1
+	</label>
+	<label for="" class="checkbox-inline">
+		<input type="checkbox">2
+	</label>
+	<label for="" class="checkbox-inline">
+		<input type="checkbox">3
+	</label>
+	<br>
+	<label for="" class="radio-inline">
+		<input type="radio">1
+	</label>
+	<label for="" class="radio-inline">
+		<input type="radio">2
+	</label>
+	<label for="" class="radio-inline">
+		<input type="radio">3
+	</label>
+	<br>
+	<hr>
+	<select name="" id="" class="form-control">
+		<option value="">1</option>
+		<option value="">2</option>
+		<option value="">3</option>
+		<option value="">4</option>
+	</select>
+	<br>
+	<hr>
+	<select name="" id="" class="form-control" multiple>
+		<option value="">1</option>
+		<option value="">2</option>
+		<option value="">3</option>
+		<option value="">4</option>
+	</select>
+	<br>
+	<hr>
+	<form action="">
+		<fieldset disabled>
+			<div class="form-group">
+				<label for="text-input">Disabled-input</label>
+				<input type="text" id='text-input' class="form-control" placeholder="disabled">
+			</div>
+			<div class="form-group">
+				<label for="select-input">Disabled-select</label>
+				<select name="" id="select-input" class="form-control">
+					<option value="">disabled</option>
+					<option value=""></option>
+					<option value=""></option>
+				</select>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox">Can't check
+				</label>
+			</div>
+			<button class="btn btn-primary" type="submit">Submit</button>
+		</fieldset>
+	</form>
+	<br>
+	<hr>
+	<input type="text" class="form-control" placeholder="here's readonly input" readonly>
+	<br>
+	<div class="help-text">
+		<label for="helpblock-input" class="sr-only">Input with help text</label>
+		<input type="text" class="form-block" id="helpblock-input" aria-describeby="helpblock">
+		<span class="help-block" id="helpblock">here's help text</span>
+	</div>
+	<br>
+	<hr>
+<!-- 	添加 .has-warning、.has-error 或 .has-success 类到这些控件的父元素即可。任何包含在此元素之内的 .control-label、.form-control 和 .help-block 元素都将接受这些校验状态的样式。
+ -->	<div class="form-group has-success">
+		<label for="success-input" class="control-label">Input with success</label>
+		<input type="text" class="form-control" id="success-input" aria-describedby="helpblock">
+		<span class="help-block" id="helpblock">help text...........</span>
+	</div>
+	<div class="form-group has-warning">
+		<label for="warning-input" class="control-label">Input with warning</label>
+		<input type="text" class="form-control" id="warning-input">
+	</div>
+	<div class="form-group has-error">
+		<label for="" class="control-label" id="error-input">Input with error</label>
+		<input type="text" class="form-control" id="error-input">
+	</div>
+	<div class="form-group has-danger">
+		<label for="danger-input" class="control-label">Input with danger</label>
+		<input type="text" class="form-control" id="danger-input" placeholder="bs4">
+	</div>
+	<div class="form-group has-feedback">
+		<label for="" class="control-label" id="feedback-input">Input with error</label>
+		<input type="text" class="form-control" id="feedback-input" placeholder="bs4">
+	</div>
+	<br>
+	<hr>
+<!-- 	添加 .has-warning、.has-error 或 .has-success 类到这些控件的父元素即可。任何包含在此元素之内的 .control-label、.form-control 和 .help-block 元素都将接受这些校验状态的样式。
+ -->	<div class="has-success">
+		<div class="checkbox">
+		<label><input type="checkbox" id="" value="">checkbox with success</label>
+		</div>
+	</div>
+	<div class="has-warning">
+		<div class="checkbox">
+		<label for=""><input type="checkbox">checkbox with warning</label>
+		</div>
+	</div>
+	<div class="has-error">
+		<div class="checkbox">
+		<label for=""><input type="checkbox">checkbox with error</label>
+		</div>	
+	</div>
+	<br>
+	<hr>
+	<!-- 对校验状态为输入框添加额外的图标。只需设置相应的 .has-feedback 类并添加正确的图标即可 -->
+	<!-- 反馈图标（feedback icon）只能使用在文本输入框 <input class="form-control"> 元素上。 -->
+	<div class="form-group has-success has-feedback">
+  		<label class="control-label" for="inputSuccess2">Input with success</label>
+  		<input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+  		<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  		<span id="inputSuccess2Status" class="sr-only">(success)</span>
+	</div>
+	<div class="form-group has-warning has-feedback">
+  		<label class="control-label" for="inputWarning2">Input with warning</label>
+  		<input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+  		<span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+  		<span id="inputWarning2Status" class="sr-only">(warning)</span>
+	</div>
+	<div class="form-group has-error has-feedback">
+  		<label class="control-label" for="inputError2">Input with error</label>
+  		<input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+  		<span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+  		<span id="inputError2Status" class="sr-only">(error)</span>
+	</div>
+	<div class="form-group has-success has-feedback">
+  		<label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+  		<div class="input-group">
+    		<span class="input-group-addon">@</span>
+    		<input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+  		</div>
+  		<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  		<span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+	</div>
+	<br>
+	<hr>
+	<form class="form-horizontal">
+ 		 <div class="form-group has-success has-feedback">
+    		<label class="control-label col-sm-3" for="inputSuccess3">Input with success</label>
+    		<div class="col-sm-9">
+      			<input type="text" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+      			<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+      			<span id="inputSuccess3Status" class="sr-only">(success)</span>
+    		</div>
+  		</div>
+  		<div class="form-group has-success has-feedback">
+    			<label class="control-label col-sm-3" for="inputGroupSuccess2">Input group with success</label>
+    		<div class="col-sm-9">
+      			<div class="input-group">
+        			<span class="input-group-addon">@</span>
+        			<input type="text" class="form-control" id="inputGroupSuccess2" 	aria-describedby="inputGroupSuccess2Status">
+      			</div>
+      			<span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+      			<span id="inputGroupSuccess2Status" class="sr-only">(success)</span>
+    		</div>
+  		</div>
+	</form>
+	<br>
+	<hr>
+	<input type="text" class="form-control input-lg" placeholder=".input-lg">
+	<input type="text" class="form-control" placeholder="input-default">
+	<input type="text" class="form-control input-sm" placeholder=".input-sm">
+	<br>
+	<hr>
+	<form class="form-horizontal">
+  		<div class="form-group form-group-lg">
+    		<label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+    		<div class="col-sm-10">
+      			<input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+    		</div>
+  		</div>
+  		<div class="form-group form-group-sm">
+    		<label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+    		<div class="col-sm-10">
+      			<input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+    		</div>
+  		</div>
+	</form>
+	<br>
+	<hr>
+	<div class="row">
+  		<div class="col-xs-2">
+    		<input type="text" class="form-control" placeholder=".col-xs-2">
+  		</div>
+  		<div class="col-xs-3">
+    		<input type="text" class="form-control" placeholder=".col-xs-3">
+  		</div>
+  		<div class="col-xs-4">
+    		<input type="text" class="form-control" placeholder=".col-xs-4">
+  		</div>
+	</div>
+</body>
+</html>

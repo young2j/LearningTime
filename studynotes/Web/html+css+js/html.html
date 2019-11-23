@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<!-- <meta http-equiv="refresh" content="30"> -->
+	<!-- 每30秒刷新页面 -->
+	<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
+	<!-- 为搜索引擎定义关键词 -->
+	<meta name="description" content="Free Web tutorials on HTML and CSS">
+	<!-- 为网页定义描述内容 -->
+	<meta name="author" content="Hege Refsnes">
+	<!-- 定义网页作者 -->
+
+	<title>Html study notes</title>
+	<base href="//www.w3cschool.cn/images/" target="_blank">
+	<!-- 基本的链接地址,该标签是HTML文档中所有链接标签的默认链接.  -->
+	<link rel="stylesheet" type="text/css" href="mystyle.css"> 
+	<!-- 链接到外部资源，通常用于链接到外部CSS，即外部样式表 -->
+	
+	<style type="text/css">        
+		body {background-color:#d0e4fe;}
+		p {color:blue;
+			margin-left: 20px}        
+	</style> <!--内部样式表-->
+	
+	<script src="">
+		document.write("Hello World!")
+	</script>
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+</head>
+<p>===========================文档格式排版相关标签========================</p>
+<body style="background-color:#ffff00">
+	<h1>一级    标题</h1>
+	<h2>二级标题</h2>
+	<h3>三级标题</h3>
+	<h4>四级标题</h4>
+	<h5>五级标题</h5>
+	<h6>六级标题</h6>
+	<br/>br换行<br/>
+	<wbr>wbr根据窗口大小自动决定是否换行<wbr>
+	<hr/>hr是水平线<hr/>
+	<img src="C:\Users\win10\Pictures\Camera Roll\icon.jpg" alt="电脑里的一张图片" width="200" height="300">
+	<!-- alt属性：在浏览器无法载入图像时，替换文本属性告诉读者他们失去的信息。 -->
+
+	<br>
+	<b>b是粗体</b>
+	<strong>strong也是粗体</strong>
+	
+	<em>emphasis强调</em>
+	<i>斜体(也是强调)</i>
+	<mark>突出显示</mark>>
+
+	<small>小号字</small>
+	<var>变量</var>
+
+	<u>下划线</u>
+	<ins>插入字</ins>
+	
+	<s>删除线</s>
+	<del>删除字</del>
+	
+	<sup>上标</sup>
+	<sub>下标</sub>
+
+	<br>
+	<!--<font color="#cococo" size="+3" face="黑体">修饰字体</font>
+	<font><center><strike> @color @bgcolor已弃用，不建议继续使用-->	
+	<p style="font-family:monospace;color:red;font-size:20px;text-align:center">
+		<nobr>这是居中对齐的不换行的段落</nobr>
+	</p>
+	<p style="text-indent: 4">首行缩进</p>
+	
+	<code>print("this is python code")</code>
+	<kbd>键盘输入文本</kbd>
+	<samp>计算机代码样本</samp>
+	<var>定义变量</var>
+	<pre>保留原始排版方式O(∩_∩)O</pre>
+
+	<abbr title="World Health Organization">WHO</abbr>
+	<address>
+		This is address<br/>
+		Visit us at:Example.com
+	</address>
+	
+	<bdo dir="rtl">定义文字显示方向</bdo>
+	<blockquote cite="https://www.w3cschool.cn/html/html-formatting.html"> 
+		这是长引用
+	</blockquote>
+	<q>这是短引用</q>
+	<cite>这是引用与引证</cite>
+	<dfn>定义项目</dfn>
+	
+
+	
+	<a href="https://www.baidu.com" title="baidu" target="_blank">百度了你也不知道</a>
+	<a href="#shuqian1">链接到书签1</a>
+	<!-- <a href="#shuqian2">链接到书签2</a> -->
+	<a name='shuqian1'>书签1内容balabala...</a>
+	<!-- <a id ='shuqian2'>书签2内容balabala...</a> -->
+	
+	<br/>
+	<a href="https://www.w3cschool.cn/tryrun/showhtml/tryhtml_areamap">
+	图像映射,同时需要&ltimg&gt&ltmap&gt&ltarea&gt三个标签</a>
+	<img src="/statics/images/course/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+	<map name="planetmap">
+  		<area shape="rect" coords="0,0,82,126" target="_blank" alt="Sun" href="/statics/images/course/sun.gif">
+  		<area shape="circle" coords="90,58,3" target="_blank" alt="Mercury" href="/statics/images/course/merglobe.gif">
+  		<area shape="circle" coords="124,58,8" target="_blank" alt="Venus" href="/statics/images/course/venglobe.gif">
+	</map>
+
+<!-- figure标签规定独立的流内容（图像、图表、照片、代码等等）。 -->
+	<figure>
+    	<figcaption>Listing 01. Using the code element</figcaption>
+    	<code>
+      		var fruits = ["CSS", "HTML", "CSS", "Javascript"];<br>
+      		document.writeln("I like " + fruits.length + " fruits");
+    	</code>
+  	</figure>
+
+<p>===============================列表标签===============================</p>
+	<ol type="A">
+		有序列表
+		<li>有序列表项1</li>
+		<li>有序列表项2</li>
+		<li>有序列表项3</li>
+		<li>有序列表项4</li>
+	</ol>
+
+	<ul type="disc">无序列表
+		<li>无序列表项1</li>
+		<li>无序列表项2</li>
+		<li>无序列表项3</li>
+		<li>无序列表项4</li>
+	</ul>
+	
+	<dl>自定义列表
+		<dt>Item1</dt>
+		<dd>---aaa</dd>
+		<dt>Item2</dt>
+		<dd>---bbb</dd>
+	</dl>
+
+
+<p>=====================================表格标签==============================</p>
+<!-- 	table[border][height][width][bordercolor][bgcolor][background][align]>thead[align][valign][bgcolor]>tr>th[colspan][bgcolor]^tbody[align][valign][bgcolor]>tr[height][bordercolor][bgcolor][align][valign]*2>td[width][height][align][valign][colspan][rowspan][bgcolor][background]*2^tfoot[align][valign][bgcolor] -->
+	<table border="5" height="600" width="400" bordercolor="red" bgcolor="#ffffff" background="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4017368492,334932509&fm=173&app=25&f=JPEG?w=450&h=635&s=F79A718DC85E7CCC708548D80300D0B6" align="center" cellpadding="" cellspacing="">
+		<caption>这里是表格标题</caption>
+
+    	<colgroup>
+    		<col span="2" style="background-color:#DB7093">
+    		<col style="background-color:yellow">
+  		</colgroup>
+			<tr>
+				<th colspan="3" bgcolor=""><font color="#ffffff">这里是表头</font></th>
+			</tr>
+			<tbody align="" valign="" bgcolor="">
+				<tr height="200" bordercolor=" " bgcolor="" align="" valign="">
+					<td width="50" height="50" align="center" valign="middle" colspan="2" rowspan="" bgcolor="" background=""><font color='#ffffff' size=10 face="华文彩云">	朝</font></td>
+					<td width="" height="" align="" valign="" colspan="" rowspan="2" bgcolor="" background=""><font color='#ffffff' size=10 face="华文彩云">	花</font></td>
+				</tr>
+				<tr height="" bordercolor="" bgcolor="" align="" valign="">
+					<td width="" height="" align="" valign="" colspan="" rowspan="2" bgcolor="" background=""><font color='#ffffff' size=10 face="华文彩云">	夕</font></td>
+					<td width="" height="" align="" valign="" colspan="" rowspan="" bgcolor="" background=""><font color='#ffffff' size=10 face="华文彩云">誓</font></td>
+				</tr>
+				<tfoot align="right" valign="" bgcolor=""><tr><td colspan="3"><font color="#ffffff">这里是表尾</font></td></tr></tfoot>
+			</tbody>
+		</thead>
+	</table>
+
+<p>===============================div块级布局标签============================</p>	
+	<div id="container" style="width: 500px">
+		<div id="header" style="background-color: #FFA500">
+			<h1 style="margin-bottom: 0;text-align: center;">Main Title</h1>
+		</div>
+		<div id="menu" style="background-color: #FFD700;height: 200px;width: 100px;float: left;">
+			<b>Menu</b><br/>
+			HTML<br/>
+			CSS<br/>
+			JavaScript
+		</div>
+		<div id="content" style="background-color: #EEEEEE;height: 200px;width: 400px;float: left;text-align: center;">
+			Contents
+		</div>
+		<div id="footer" style="background-color: #FFA500;clear: both;text-align: center; ">
+			Copyright&copyW3C
+		</div>
+	</div>
+	
+	<br/>
+<p>==================================表单标签===============================</p>
+	<form action="">
+		<fieldset>
+			<legend>创建各种HTML表单：</legend>
+			姓名：<input type="text" name="username" size=21 /><br/>
+			密码：<input type="password" name="pwd" maxlength=8 size=21/><br/>
+			<!-- 性别：<input type="text" name="sex" size=4 maxlength=1 /> -->
+			性别：<input type="radio" name="male" checked value="男" />男<input type="radio" name="female" value="女" />女<br />
+			年龄：<input type="text" name="age" size=4 maxlength=3 /><br />
+			住址：<input type="text" name="address" size=50 value="四川成都"/><br/>
+			兴趣：<input type="checkbox" name="hobby" value="游泳" />游泳
+			<input type="checkbox" name="hobby" value="足球" />足球
+			<input type="checkbox" name="hobby" value="篮球" />篮球<br />
+			普通按钮：<input type="button" value="关闭当前页面" onclick="window.close();"/><br />
+			提交按钮：<input type="submit" value="提交表单页面" /><br />
+			重置按钮：<input type="reset" value="重置选项按钮" /><br />
+			图像域：<input type="image" name="img" src="https://7n.w3cschool.cn/statics/images/course/tryitimg.gif" width="60" height="25" /><br />
+			隐藏域：<input type="hidden" name="user_id" value="10001" />这里是看不见的<br />
+			禁止输入:<input  type="text" disabled=""><br/>
+			文件域：<input type="file" name="photo" /><br />
+			文本区域：<br /><textarea name="word" cols="40" rows="5" value=""></textarea><br />
+			
+			菜单选项：<select name="" size="1">
+				<optgroup label="where">
+					<option value="home" selected>home</option>
+					<option value="school">school</option>	
+				</optgroup>
+				<optgroup label="dowhat">
+					<option value="driving">driving</option>
+					<option value="tranvel">tranveling</option>					
+				</optgroup>
+			</select>
+				<input type="submit">
+		</fieldset>
+	</form>
+
+
+	<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		<fieldset>
+			<legend>H5表单新标签:</legend>
+				<datalist id="browsers">
+					<option value="Internet Explorer">
+					<option value="Firefox">
+					<option value="Chrome">
+					<option value="Opera">
+					<option value="Safari">
+				</datalist>
+				加密: <keygen name="security">
+		
+				0<input type="range" id="a" value="50">100
+				+<input type="number" id="b" value="50">
+				=<output name="x" for="a b"></output>
+		</fieldset>
+	</form>
+
+
+<p>==============================iframe================================</p>
+	<iframe src="https://www.baidu.com/" width="300" height="300"></iframe>
+	<iframe src="https://www.baidu.com/" frameborder="0" name="iframe_a" width="300" height="250" class="" id="" style="" title="W3C"></iframe>
+	<p style="text-align: center;"><a href="https://www.baidu.com/" target="iframe_a">https://www.baidu.com/</a></p>
+
+<p>============================插件功能/音频/视频=============================</p>
+<!-- 	<object><embed>标签用于插入对象 (例如在网页中嵌入 Java 小程序, PDF 阅读器, Flash 播放器),元素具有局部属性:data，type，height，width，usemap，name，form。-->
+	<object width="400" height="50" data="bookmark.swf">
+		 <param name="autoplay" value="true"> 
+	</object>
+	<object width="100%" height="500px" data="snippet.html"></object>
+	<object data="logo.png"></object>
+
+	<embed width="400" height="50" src="bookmark.swf">
+	<embed width="100%" height="500px" src="snippet.html">
+	<embed src="logo.png">
+	
+<!-- HTML5 <audio> 元素会尝试以 mp3 或 ogg 来播放音频。如果失败，代码将回退尝试 <embed> 元素。 -->
+	<audio controls height="100" width="100">
+  		<source src="horse.mp3" type="audio/mpeg">
+  		<source src="horse.ogg" type="audio/ogg">
+  		<embed height="50" width="100" src="horse.mp3">
+	</audio>
+<!-- HTML 5 <video> 元素会尝试播放以 mp4、ogg 或 webm 格式中的一种来播放视频。如果均失败，则回退到 <embed> 元素。 -->
+	<video width="320" height="240" controls>
+  		<source src="movie.mp4" type="video/mp4">
+  		<source src="movie.ogg" type="video/ogg">
+  		<source src="movie.webm" type="video/webm">
+  		<object data="movie.mp4" width="320" height="240">
+    		<embed src="movie.swf" width="320" height="240">
+  		</object> 
+	</video>
+
+	<video width="320" height="240" controls> 
+		<source src="forrest_gump.mp4" type="video/mp4"> 
+		<source src="forrest_gump.ogg" type="video/ogg"> 
+		<track src="subtitles_en.vtt" kind="subtitles" srclang="en" 
+		label="English">
+		<track src="subtitles_no.vtt" kind="subtitles" srclang="no" 
+		label="Norwegian"> 
+	</video>
+<p>==============================颜色===================================</p>
+<a href="https://www.w3cschool.cn/html/html-colorvalues.html">141个颜色名和颜色码</a>
+
+
+<p>=============================javascript===============================</p>
+	<p id="demo">
+		JavaScript can react to events. Like the click of a button.
+	</p>
+	<script>
+		function myFunction()
+		{
+			document.getElementById("demo").innerHTML="Hello JavaScript!";
+		}
+	</script>
+	<button type="button" onclick="myFunction()">Click Me!</button>
+  	<br/>
+
+
+  	<meter id="mymeter" value="90" min="10" max="100" low="40" 
+  	high="80"optimum="60"></meter>
+  	<p>
+    	<button type="button" value="30">30</button>
+    	<button type="button" value="60">60</button>
+    	<button type="button" value="90">90</button>
+  	</p>
+  	<script>
+    	var buttons = document.getElementsByTagName("BUTTON");
+    	var meter = document.getElementById("mymeter");
+    	for (var i = 0; i < buttons.length; i++) {
+      	buttons[i].onclick = function(e) {
+        	meter.value = e.target.value;
+      	};
+    	}
+  	</script>
+	<br/>
+
+
+  	<progress id="myprogress" value="10" max="100"></progress>
+  	<p>
+   		<button type="button" value="30">30%</button>
+    	<button type="button" value="60">60%</button>
+    	<button type="button" value="90">90%</button>
+  	</p>
+	<script>
+    	var buttons = document.getElementsByTagName("BUTTON");
+    	var progress = document.getElementById("myprogress");
+    	for (var i = 0; i < buttons.length; i++) {
+      		buttons[i].onclick = function(e) {
+        	progress.value = e.target.value;
+      	};
+    	}
+  	</script>
+
+
+
+
+	<br/>
+	<canvas id="djx" style="border: 1px solid;" width="600" height="200"></canvas>
+	<script>
+		var canvas=document.getElementById('djx');
+		var context=canvas.getContext('2d');
+		context.fillStyle="#EEEEFF";
+		context.fillRect(0,0,600,200);
+		context.strokeStyle='red';
+		context.lineWidth=3;
+		// context.fillRect(x,y,width,height);
+		context.fillRect(50,50,100,100);
+		context.strokeRect(50,50,100,100);
+
+		// context.arc(x,y,radius,startAngle,endAngle,anticlockwise);
+		context.beginPath();
+		context.arc(250,100,50,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle='rgba(255,0,0,0.25';
+		context.fill();
+
+		context.beginPath();
+		context.strokeStyle='#c00';
+		context.lineWidth=2;
+		context.arc(400,50,30,0,Math.PI*2,true);
+		context.fill();
+		context.stroke();
+
+		context.beginPath();
+		context.strokeStyle='#c00';
+		context.lineWidth=2;
+		context.arc(400,50,20,0,Math.PI,false);
+		// context.fill();
+		context.stroke();
+
+		context.beginPath();
+		context.fillStyle='#c00';
+		context.arc(385,40,3,0,Math.PI*2,true);
+		context.fill();
+		context.stroke();
+
+		context.beginPath();
+		context.fillStyle='#c00';
+		context.arc(415,40,3,0,Math.PI*2,true);
+		context.fill();
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(400,80);
+		context.lineTo(400,140);
+		context.lineTo(380,180);
+		context.moveTo(400,140);
+		context.lineTo(420,180);
+		context.moveTo(380,100);
+		context.lineTo(400,90);
+		context.lineTo(420,100);
+		context.stroke();
+		context.closePath();
+		// window.addEventListener('load',drawDiagonal,true);
+	</script>
+	<br />绘制线性渐变：&nbsp;&nbsp;&nbsp;绘制径向渐变：<br />
+	<canvas id="djy" style="border: 1px solid;" width="400" height="200"></canvas>
+	<script>
+		var canvas=document.getElementById('djy');
+		var context=canvas.getContext('2d');
+		// context.createLinearGradient(xStart,yStart,xEnd,yEnd)
+		var lingrad = context.createLinearGradient(0,0,0,150);
+		lingrad.addColorStop(0,'black');
+		lingrad.addColorStop(1,'white');
+		context.fillStyle=lingrad;
+		context.fillRect(10,10,130,130);
+		// context.createRadialGradient(xStart,yStart,radiusStart,xEnd,yEnd,radiusEnd)
+		var radgrad = context.createRadialGradient(120,20,20,360,160,40);
+		radgrad.addColorStop(0,'#A7D30C');
+		radgrad.addColorStop(0.9,'#019F62');
+		radgrad.addColorStop(1,'rgba(1,159,98,0)');
+		context.fillStyle = radgrad;
+		context.fillRect(200,10,400,190);
+
+	</script>
+</body>
+</html>

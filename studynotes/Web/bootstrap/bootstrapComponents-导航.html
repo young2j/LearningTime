@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content='width=device-width,initial-scale=1' charset="UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	<title>bootstrapComponent-导航</title>
+</head>
+<body>
+	<ul class="nav nav-tabs">
+		<li class="active" role="presentation"><a href="#">Home</a></li>
+		<li role="presentation"><a href="#">Profile</a></li>
+		<li role="presentation"><a href="#">Message</a></li>
+	</ul>
+	<br>
+	<hr>
+	<ul class="nav nav-pills">
+		<li class="active" role="presentation"><a href="#">Home</a></li>
+		<li role="presentation"><a href="#">Profile</a></li>
+		<li role="presentation"><a href="#">Message</a></li>
+	</ul>
+	<br>
+	<hr>
+	<ul class="nav nav-pills nav-stacked">
+		<li class="active" role="presentation"><a href="#">Home</a></li>
+		<li role="presentation"><a href="#">Profile</a></li>
+		<li role="presentation"><a href="#">Message</a></li>
+	</ul>
+	<br>
+	<hr>
+	<ul class="nav nav-tabs nav-justified">
+		<li class="active" role="presentation"><a href="#">Home</a></li>
+		<li role="presentation"><a href="#">Profile</a></li>
+		<li role="presentation" class='disabled'><a href="#">Message[Forbidden]</a></li>
+	</ul>
+	<br>
+	<hr>
+	<ul class="nav nav-pills">
+		<li class="active" role="presentation"><a href="#">Home</a></li>
+		<li role="presentation"><a href="#">Profile</a></li>
+		<li role="presentation">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Message<span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+			</ul>
+		</li>
+	</ul>
+	<br>
+	<hr>
+	<!-- 务必使用 <nav> 元素，或者，如果使用的是通用的 <div> 元素的话，务必为导航条设置 role="navigation" 属性 -->
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		    <!-- for better mobile display -->
+			<div class="navbar-header">
+<!-- 				<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button> -->
+				<a href="#" class="navbar-brand"><img src="./shajia.jpg" alt="Brand" style="width: 50px;height: 35px;"></a>
+			</div>
+
+			<div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active">
+						<a href="#">Link<span class="sr-only">(current)</span></a>
+					</li>
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">a</a></li>
+							<li><a href="#">b</a></li>
+							<li><a href="#">c</a></li>
+							<li class="divider" role="separater"></li>
+							<li><a href="#">d</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<form action="" class="navbar-form navbar-left">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Search">
+					</div>
+					<button class="btn btn-default" type="submit">Submit</button>
+				</form>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"><span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li class="divider" role="separator"></li>
+							<li><a href="#">3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<br>
+	<hr>
+	<form class="navbar-form navbar-left" role="search">
+  		<div class="form-group">
+    		<input type="text" class="form-control" placeholder="Search">
+  		</div>
+  		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+	<br>
+	<hr>
+	<nav class="navbar navbar-default navbar-fixed-top"> <!-- navbar-static-top --><!-- navbar-fixed-bottom -->
+		<button type="button" class="btn btn-default navbar-btn">Sign in</button>
+	</nav>
+	<br>
+	<hr>
+	<nav class="navbar navbar-inverse">
+		<p class="navbar-text">Signed in as Mark Otto</p>
+	</nav>
+	<br>
+	<hr>
+	<nav class="navbar navbar-default">
+		<p class="navbar-text navbar-right">not-link <a href="#" class="navbar-link">is-link</a></p>
+	</nav>
+	<br>
+	<hr>
+	<ol class="breadcrumb">
+		<li><a href="#">home</a></li>
+		<li><a href="#">jge</a></li>
+		<li class="active">data</li>
+	</ol>
+</body>
+</html>

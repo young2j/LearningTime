@@ -1,0 +1,653 @@
+/*样式层叠优先级(低到高)：
+	1.浏览器缺省设置
+	2.外部样式表
+	3.内部样式表（位于<head> 标签内部）
+	4.内联样式（在HTML元素内部）*/
+
+/*选择器的优先级(低到高)[权重]：
+	1.通用选择器（*）
+	2.元素(类型)选择器 [1]
+	3.类选择器 [10]
+	4.属性选择器
+	5.伪类 
+	6.ID选择器 [100]
+	7.内联样式 [1000]
+
+!important 最优先使用，在优先级规则之外。
+*/
+
+============================== 选择器 ===================
+/*id选择器以#id表示*/
+#id
+{
+	color: black;
+	text-align: center;
+	font-family: monospace;
+}
+
+/*class选择器以.class表示，且有别于id选择器，它可以在多个元素中起作用*/
+p.center
+{
+	color: black;
+	text-align: center;
+	font-family: monospace;
+}
+
+
+/*分组选择器,以逗号分割：*/
+h1,h2,p 
+{ 
+	color:green; 
+}
+
+
+/*后代选择器以空格分割：*/
+div p 
+{ 
+background-color:yellow; 
+}
+
+/*子元素选择器以>分割：*/
+div>p 
+{ 
+background-color:yellow; 
+}
+
+/*相邻兄弟选择器，以+分割：*/
+div+p 
+{ 
+background-color:yellow; 
+}
+
+/*普通相邻兄弟选择器，以~分割：*/
+div~p 
+{ 
+background-color:yellow; 
+}
+
+/*属性选择器，以[]包围：*/
+[title] 
+{ 
+	color:blue; 
+}
+[title=w3cschool] 
+{ 
+	border:5px solid green; 
+}
+[title~=hello] 
+{ 
+	color:blue; 
+}
+[lang|=en] 
+{ 
+	color:blue; 
+}
+
+input[type="text"] 
+{ 
+	width:150px; 
+	display:block; 
+	margin-bottom:10px; 
+	background-color:yellow; 
+} 
+input[type="button"] 
+{ 
+	width:120px; 
+	margin-left:35px; 
+	display:block; 
+}
+=========================== background style =============================
+body
+{
+	background-color: #b0c4de;
+	background-image: url("img.gif");/*默认会在页面的水平或者垂直方向平铺*/
+	background-repeat: repeat-x; /*平铺设置 repeat;repeat-y;no-repeat;*/
+	background-attachment: scroll; /*背景图像固定fixed还是随动scroll*/
+	background-position: right top; /*设置背景图像位置：水平位置+垂直位置 */
+	background-position: 66% 33%;
+	background-position: 50px 100px; /*图像左上角距离内边距左上角的长度*/
+	background-size: contain; /*自适应*/
+}
+/*可按顺序简写：*/
+body{background:#ffffff url('img_tree.png') no-repeat initial right top;}
+
+============================== text style ================================
+p
+{
+	color: rgb(255,0,0);
+	text-align: justify; /*两端对齐*/
+	
+	text-decoration: line-through; /*overline;underline;none*/
+	text-decoration-color:orange;
+	text-decoration-style:dashed;
+	text-transform: uppercase; /*lowercase;capitalize;*/
+	text-indent: 50px;
+	text-shadow: 2px 2px #FF0000; /*文字阴影效果*/
+
+	word-spacing: 30px;  /*字间距默认为normal，与0等同*/
+	letter-spacing: 2px; /*字符间距*/
+	line-height: 100%;  /*大多数浏览器默认行距为110%-170%*/
+	direction: rtl; /*书写方向从右到左*/
+	white-space: nowrap; /*禁用文字环绕*/
+	vertical-align: text-bottom; /*text-top;文字与图像的对齐方式*/
+	unicode-bidi: normal; /*embed;bidi-override;initial;inherit;设置或返回文本是否被重写 */
+	word-wrap: break-word; /*normal*/
+}
+
+
+==================================== font style ==========================
+/*CSS 定义了 5 种通用字体系列：
+	* Serif 字体:Times New Roman;Georgia
+	* Sans-serif 字体:Arial;Verdana;
+	* Monospace 字体: Courier New;Lucida Console;
+	* Cursive 字体
+	* Fantasy 字体
+*/
+
+p
+{
+	font-family: "Times New Roman",Times,serif;
+	font-style: normal; /*italic;oblique;*/	
+	font-size: 14px;
+	font-size: 1em; /*1em的默认大小是16px,根据父元素文字大小而已*/
+	font-size: 100%;
+	font-size-adjust: 0.58; /*only firefox support now*/
+
+	font-weight: normal; /*lighter;bold;900;*/
+	font-variant: normal; /*small-caps;字体变化*/
+	font-stretch: wider; /*narrower|ultra-condensed|extra-condensed|condensed|semi-condensed|normal|semi-expanded|expanded|extra-expanded|ultra-expanded|*/
+}
+
+/*简写：*/
+p
+{
+	font:italic bold 15px sans-serif; 
+}
+
+/*在线生成字体CSS：https://www.w3cschool.cn/tools/index?name=csscreate*/
+
+============================= link style ==============================
+/*四个链接状态:
+	a:link - 正常，未访问过的链接
+	a:visited - 用户已访问过的链接
+	a:hover - 当用户鼠标放在链接上时
+	a:active - 链接被点击的那一刻*/
+
+a:link 
+{
+	background-color:#B2FF99;
+	text-decoration: none;
+} 
+a:visited 
+{
+	background-color:#FFFF85;
+	text-decoration: line-through;
+} 
+a:hover 
+{
+	background-color:#FF704D;
+	text-decoration: underline;
+} 
+a:active 
+{
+	background-color:#FF704D;
+	text-decoration:overline;
+}
+
+=============================== list style ============================
+ul.a
+{
+	list-style-type: circle; /*none;disc;circle;square;demical;upper-roman;lower-roman;upper-alpha;lower-alpha;*/
+	list-style-image: url('path.gif');
+	list-style-position: 0px 5px;
+	padding: 0px;
+	padding-left: ;
+	padding-right: ;
+	padding-bottom: ;
+	padding-top: ;
+}
+
+li
+{
+	display: inline;  /*水平*/
+}
+
+/*简写：*/
+ul li
+{
+	list-style:square 0px 5px url("path.gif");
+}
+
+============================== table style ============================
+table
+{
+	border-collapse: collapse;
+	width: 100%;
+	height: 50px;
+}
+
+caption
+{
+	caption-side: top;
+}
+
+th
+{
+	background-color: green;
+	color: white;
+	height: 50px;
+}
+
+table,th,td
+{
+	border:1px solid black;
+	text-align:left;
+	height: 50px;
+	vertical-align: bottom;
+	padding:15px;
+
+}
+
+================================== box model ==============================
+/*Margin（外边距） - 清除边框区域。Margin没有背景颜色，它是完全透明
+Border（边框） - 边框周围的填充和内容。边框是受到盒子的背景颜色影响
+Padding（内边距） - 清除内容周围的区域。会受到框中填充的背景颜色影响
+Content（内容） - 盒子的内容，显示文本和图像*/
+div
+{
+	width:220px;
+	margin:0px; /*auto;%;*/
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 10px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 50px;
+	padding-left: 50px;
+
+	border-style: ;
+	border-image: ;
+	border-width: 5px; /*thin;medium;thick*/
+	border-color: transparent; /*透明边框*/
+	border:5px solid red; /*简写*/
+
+	border-top-color: ;  /*top;bottom;left;right;*/
+	border-top-style:dotted; 
+	border-top-width: ;
+	border-top: ; /*简写*/
+	
+	outline-style: ; /*轮廓*/
+	outline-color: ;
+	outline-width: ;
+}
+
+/*border-style:*/
+p.none {border-style:none;}
+p.dotted {border-style:dotted;}
+p.dashed {border-style:dashed;}
+p.solid {border-style:solid;}
+p.double {border-style:double;}
+p.groove {border-style:groove;}
+p.ridge {border-style:ridge;}
+p.inset {border-style:inset;}
+p.outset {border-style:outset;}
+p.hidden {border-style:hidden;}
+
+/*border-style属性可以有1-4个值：
+border-style:dotted solid double dashed;
+	上边框是 dotted
+	右边框是 solid
+	底边框是 double
+	左边框是 dashed
+
+border-style:dotted solid double;
+	上边框是 dotted
+	左、右边框是 solid
+	底边框是 double
+
+border-style:dotted solid;
+	上、底边框是 dotted
+	左、右边框是 solid
+
+border-style:dotted;
+	四面边框是 dotted*/
+
+/*Padding属性，可以有一到四个值:
+padding:25px 50px 75px 100px;
+	上填充为25px
+	右填充为50px
+	下填充为75px
+	左填充为100px
+padding:25px 50px 75px;
+	上填充为25px
+	左右填充为50px
+	下填充为75px
+padding:25px 50px;
+	上下填充为25px
+	左右填充为50px
+padding:25px;
+	所有的填充都是25px*/
+
+
+/*outline-style:*/
+p {border:1px solid red;}
+p.dotted {outline-style:dotted;}
+p.dashed {outline-style:dashed;}
+p.solid {outline-style:solid;}
+p.double {outline-style:double;}
+p.groove {outline-style:groove;}
+p.ridge {outline-style:ridge;}
+p.inset {outline-style:inset;}
+p.outset {outline-style:outset;}
+
+============================= dimension\display\visibility\position ================================
+p
+{
+	height: ;
+	line-height: ;
+	max-height: ;
+	max-width: ;
+	min-height: ;
+	min-width: ;
+	width: ;
+
+	top:;
+	right: ;
+	bottom: ;
+	left: ;
+}
+
+span
+{
+	display: none; /*inline;block;*/
+	visibility: hidden;
+}
+
+div
+{
+	position: absolute; /*static;fixed;relative;*/
+	z-index: -1; /*堆叠顺序*/	
+	overflow: hidden; /*scroll;auto;内容溢出区域时的处理。*/
+
+}
+
+img
+{
+	clip:rect(0px,60px,200px,0px); /*裁剪*/
+	cursor: help; 
+	float:right; 
+	clear: both; /*清除浮动*/
+}
+
+====================================伪类/元素=========================
+
+选择器			示例				示例说明
+
+:link			a:link			选择所有未访问链接
+:visited		a:visited		选择所有访问过的链接
+:active			a:active		选择正在活动链接
+:hover			a:hover			把鼠标放在链接上的状态
+:focus			input:focus		选择元素输入后具有焦点
+:first-letter	p:first-letter	选择每个<p> 元素的第一个字母
+:first-line		p:first-line	选择每个<p> 元素的第一行
+:first-child	p:first-child	选择器匹配属于任意元素的第一个子元素的 <]p> 元素
+:before			p:before		在每个<p>元素之前插入内容
+:after			p:after			在每个<p>元素之后插入内容
+:lang(language)	p:lang(it)		为<p>元素的lang属性选择一个开始值
+
+================================导航栏=================================
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		ul
+		{
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			padding-top:6px;
+			padding-bottom:6px;
+		}
+		li
+		{
+			display:inline;
+			/*float: left;*/
+		}
+		a:link,a:visited
+		{
+			font-weight:bold;
+			color:#FFFFFF;
+			background-color:#98bf21;
+			text-align:center;
+			padding:6px;
+			text-decoration:none;
+			text-transform:uppercase;
+		}
+		a:hover,a:active
+		{
+			background-color:#7A991A;
+		}
+		
+		</style>
+	</head>
+
+	<body>
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+
+	<p><b>Note:</b> If you only set the padding for a elements (and not ul), the links will go outside the ul element. Therefore, we have added a top and bottom padding for the ul element.</p>
+	</body>
+</html>
+----------------------------------
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>下拉菜单实例|W3Cschool教程(w3cschool.cn)</title>
+	<meta charset="utf-8">
+	<style>
+		.dropbtn {
+		    background-color: #4CAF50;
+		    color: white;
+		    padding: 16px;
+		    font-size: 16px;
+		    border: none;
+		    cursor: pointer;
+		}
+		
+		.dropdown {
+		    position: relative;
+		    display: inline-block;
+		}
+		
+		.dropdown-content {
+		    display: none;
+		    position: absolute;
+		    background-color: #f9f9f9;
+		    min-width: 160px;
+		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		}
+		
+		.dropdown-content a {
+		    color: black;
+		    padding: 12px 16px;
+		    text-decoration: none;
+		    display: block;
+		}
+		
+		.dropdown-content a:hover {background-color: #f1f1f1}
+		
+		.dropdown:hover .dropdown-content {
+		    display: block;
+		}
+		
+		.dropdown:hover .dropbtn {
+		    background-color: #3e8e41;
+		}
+		</style>
+	</head>
+<body>
+
+	<h2>下拉菜单</h2>
+	<p>鼠标移动到按钮上打开下拉菜单。</p>
+
+	<div class="dropdown">
+  		<button class="dropbtn">下拉菜单</button>
+  		<div class="dropdown-content">
+    		<a href="http://www.w3cschool.cn">W3Cschool教程 1</a>
+    		<a href="http://www.w3cschool.cn">W3Cschool教程 2</a>
+    		<a href="http://www.w3cschool.cn">W3Cschool教程 3</a>
+  		</div>
+	</div>
+
+</body>
+</html>
+
+=========================== 图像拼合 ============================
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		#navlist
+		{
+			position:relative;
+		}
+		#navlist li
+		{
+			margin:0;padding:0;list-style:none;position:absolute;top:0;
+		}
+		#navlist li, #navlist a
+		{
+			height:44px;display:block;
+		}
+		
+		#home
+		{
+			left:0px;width:46px;
+		}
+		#home
+		{
+			background:url('/statics/images/course/img_navsprites_hover.gif') 0 0;
+		}
+		#home a:hover
+		{
+			background: url('/statics/images/course/img_navsprites_hover.gif') 0 -45px;
+		}
+		
+		#prev
+		{
+			left:63px;width:43px;
+		}
+		#prev
+		{
+			background:url('/statics/images/course/img_navsprites_hover.gif') -47px 0;
+		}
+		#prev a:hover
+		{
+			background: url('/statics/images/course/img_navsprites_hover.gif') -47px -45px;
+		}
+		
+		#next
+		{
+			left:129px;width:43px;
+		}
+		#next
+		{
+			background:url('/statics/images/course/img_navsprites_hover.gif') -91px 0;
+		}
+		#next a:hover
+		{
+			background: url('/statics/images/course/img_navsprites_hover.gif') -91px -45px;
+		}
+	</style>
+</head>
+
+<body>
+	<ul id="navlist">
+	  <li id="home"><a href="default.asp"></a></li>
+	  <li id="prev"><a href="css_intro.asp"></a></li>
+	  <li id="next"><a href="css_syntax.asp"></a></li>
+	</ul>
+</body>
+</html>
+
+======================================media rule===========================
+/*@media 规则允许在相同样式表为不同媒体设置不同的样式：
+
+媒体类型		描述
+all			用于所有的媒体设备。
+aural		用于语音和音频合成器。
+braille		用于盲人用点字法触觉回馈设备。
+embossed	用于分页的盲人用点字法打印机。
+handheld	用于小的手持的设备。
+print		用于打印机。
+projection	用于方案展示，比如幻灯片。
+screen		用于电脑显示器。
+tty			用于使用固定密度字母栅格的媒体，比如电传打字机和终端。
+tv			用于电视机类型的设备。*/
+<html>
+<head>
+	<style>
+		@media screen
+		{
+			p.test {font-family:verdana,sans-serif;font-size:14px;}
+		}
+		@media print
+		{
+			p.test {font-family:times,serif;font-size:10px;}
+		}
+		@media screen,print
+		{
+			p.test {font-weight:bold;}
+		}
+	</style>
+</head>
+	
+<body>
+....
+</body>
+</html>
+
+======================== 列布局(css3) ====================
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ul {
+	margin-left: 5px;
+	width: 250px;
+	height: 100px;
+	
+	-webkit-column-count: 2; /* Chrome, Safari, Opera */
+	-moz-column-count: 2; /* Firefox */
+	-ms-column-count: 2; /* IE */
+	-o-column-count: 2;
+	column-count: 2;
+	
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px; 
+	column-gap: 40px;
+	    
+	-webkit-column-rule: 4px outset #ff00ff; 
+	-moz-column-rule: 4px outset #ff00ff;
+	column-rule: 4px outset #ff00ff;
+}
+
+li {
+	list-style: disc inside;
+}
+</style>
+</head>
+<body>
+  <ul>
+    <li>A</li><li>B</li><li>C</li><li>D</li>
+    <li>E</li><li>F</li><li>G</li><li>H</li>
+        <li>A</li><li>B</li><li>C</li><li>D</li>
+    <li>E</li><li>F</li><li>G</li><li>H</li>    
+  </ul>
+</body>
+</html>
