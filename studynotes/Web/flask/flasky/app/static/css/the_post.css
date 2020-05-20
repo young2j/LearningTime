@@ -1,0 +1,42 @@
+.post {
+    display: inline-flex;
+}
+
+p.post-body{
+    margin-left: 20px;
+}
+
+.post-time {
+    display:flex;
+    padding-left:75%;
+    margin-top:0%;
+}
+
+.list-group-item{
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+#comment-count{
+    height:15px;
+    margin-top: 2px;
+}
+
+#comment-icon{
+    margin-top: 1px;
+}
+
+
+.comment {
+    display: inline-flex;
+}
+
+p.comment-body{
+    margin-left: 20px;
+}
+
+.comment-time {
+    display:flex;
+    padding-left:80%;
+    margin-top:0%;
+}

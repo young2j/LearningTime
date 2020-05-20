@@ -1,0 +1,64 @@
+<div class="list-group">
+    {% for comment in comments  %}
+        {% if current_user.can(Permission.MODERATE) %}
+        <div class="list-group-item list-group-item-action">
+            <div class='comment'>
+                <div class="d-flex flex-column">
+                    <a href="{{url_for('user.user_info',username=comment.author.name)}}">
+                        <img src="{{comment.author.get_avatar(size=20)}}" alt="avatar">
+                        <p class='comment-author'>
+                            {{comment.author.name}}
+                        </p>
+                    </a>
+
+                    {% if comment.disabled %}
+                    <a href="{{url_for('post.enable_comment',id=comment.id,page=pagination.page)}}">
+                        <span class="label label-danger">enable</span>
+                    </a>                
+                    {% else %}
+                    <a href="{{url_for('post.disable_comment',id=comment.id,page=pagination.page)}}">
+                        <span class="label label-default">disable</span>
+                    </a>
+                    {% endif %}
+
+                </div>
+                <p class='comment-body'>
+                    {% if comment.disabled %}
+                        <del>{{comment.body}}</del>
+                    {% else %}
+                        {{comment.body}}
+                    {% endif %}
+                </p>
+            </div>
+            
+            <div class='comment-time'>
+                <small>{{moment(comment.timestamp).format('L')}}</small>&emsp;
+                <small>{{moment(comment.timestamp).fromNow(refresh=True)}}</small>
+            </div>
+        </div>
+        {% else %}
+        {% if not comment.disabled %}
+        <div class="list-group-item list-group-item-action">
+            <div class='comment'>
+                <div class="d-flex flex-column">
+                    <a href="{{url_for('user.user_info',username=comment.author.name)}}">
+                        <img src="{{comment.author.get_avatar(size=20)}}" alt="avatar">
+                        <p class='comment-author'>
+                            {{comment.author.name}}
+                        </p>
+                    </a>
+                </div>
+                <p class='comment-body'>
+                    {{comment.body}}
+                </p>
+            </div>
+        
+            <div class='comment-time'>
+                <small>{{moment(comment.timestamp).format('L')}}</small>&emsp;
+                <small>{{moment(comment.timestamp).fromNow(refresh=True)}}</small>
+            </div>
+        </div>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>

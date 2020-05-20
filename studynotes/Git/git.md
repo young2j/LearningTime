@@ -60,6 +60,8 @@ git clone git@github.com:michaelliao/gitskills.git
 git branch dev
 git checkout dev
 git checkout -b dev #二合一
+git checkout -b dev origin/dev 切换远程分支
+
 # 或
 git switch dev 
 git switch -c dev # create

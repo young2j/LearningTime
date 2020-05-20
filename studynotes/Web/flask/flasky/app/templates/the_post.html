@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename='css/the_post.css')}}">
+{% endblock head %}
+
+{% block title %} Flasky-Post{% endblock title %}
+
+{% block page_content %}
+    <div class="list-group">
+        <div class="list-group-item list-group-item-action">
+            <div class='post'>
+                <div class="d-flex flex-column">
+                    <a href="{{url_for('user.user_info',username=post.author.name)}}">
+                        <img src="{{post.author.get_avatar(size=50)}}" alt="avatar">
+                        <p class='post-author'>
+                            {{post.author.name}}
+                        </p>
+                    </a>
+                    {% if post.author==current_user or current_user.can(Permission.ADMIN)%}
+                    <a href="{{url_for('post.edit_post',id=post.id)}}">
+                        <span class="label label-default">edit post</span>
+                    </a>
+                    {% endif %}
+                </div>
+                <p class='post-body'>
+                    {% if post.body_html %}
+                    {{post.body_html | safe}}
+                    {% else %}
+                    {{post.body}}
+                    {% endif %}
+                </p>
+            </div>
+            <div class='post-time'>
+                <span class="glyphicon glyphicon-edit" id='comment-icon'></span>
+                <span class="label label-warning" id='comment-count'>
+                    {{post.comments.filter_by(disabled=False).count()}}
+                </span>&emsp;
+                <small>{{moment(post.timestamp).format('L')}}</small>&emsp;
+                <small>{{moment(post.timestamp).fromNow(refresh=True)}}</small>
+            </div>
+        </div>
+    </div>
+    <div>
+        {% if current_user.can(Permission.COMMENT) %}
+        {{wtf.quick_form(form)}}
+        {% endif %}
+    </div>
+
+
+    {% include '_comment_list.html' %}
+
+    <div class="pagination">
+        {{macros.pagination_widget(pagination,'post.the_post',id=post.id)}}
+    </div>
+{% endblock page_content %}

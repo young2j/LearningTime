@@ -58,6 +58,18 @@ Windows: deactivate
 # 删除
 conda remove -n your_env_name --all
 
+
+#---env----
+
+python3 -m venv tutorial-env
+
+#在Windows上，运行:
+tutorial-env\Scripts\activate.bat
+#在Unix或MacOS上，运行:
+source tutorial-env/bin/activate
+
+#退出
+deactivate
 ========================================================
 import pip 
 from subprocess import call

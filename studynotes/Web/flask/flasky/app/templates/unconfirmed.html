@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Flasky - Unconfirmed {% endblock title %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Hello,{{current_user.name}}!</h1>
+    <h2>you have not confirmed your account yet.</h2>
+</div>
+<p>
+    Need another confirmation link?
+    <a href="{{url_for('auth.resend_confirmation')}}">Click here to confirm again</a>
+</p>
+{% endblock page_content %}

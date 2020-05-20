@@ -1,3 +1,19 @@
+```shell
+git clone https://github.com/nvm-sh/nvm.git
+cd nvm & sh ./install.sh
+sudo nano ~/.zshrc
+source ~/.zshrc
+
+// 'version' not found
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node/ 
+nvm install 10.8.0
+```
+```.zshrc
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+```
+
 ```javascript
 npm install npm -g //更新npm
 npm install package [--save-dev]//本地安装
@@ -18,7 +34,7 @@ npm unpublish package@version
 
 | 名称                      | 描述                                                         | 简写         |
 | :------------------------ | :----------------------------------------------------------- | :----------- |
-| npm install xxx           | 安装xxx模块，但不记录到package.json里                        | npm i xxx    |
+| npm install xxx           | 安装xxx模块，记录到package.json里                            | npm i xxx    |
 | npm install --save xxx    | 安装xxx模块，并且记录到package.json里，字段对应的dependency，是产品环境必须依赖的模块 | npm i -s xxx |
 | npm install --save-de xxx | 安装xxx模块，并且记录到package.json里，字段对应的dev-dependency，是开发环境必须依赖的模块，比如测试类的（mocha、chai、sinon、zombie、supertest等）都在 | npm i -D xxx |
 | npm install --global xxx  | 全局安装xxx模块，但不记录到package.json里，如果模块里package.json有bin配置，会自动链接，作为cli命令 | npm i -g xxx |

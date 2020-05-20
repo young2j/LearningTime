@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <title>Vue-study</title>
+
+  <style>
+    .fade-enter-active .fade-leave-active{
+      transition: opacity 0.5s;
+    }
+    .fade-enter .fade-leave-to{
+      opacity: 0;
+    }
+  </style>
+  
+</head>
+
+<body>
+  <div id="app" v-bind:title="message">
+    <button @click='handleClick'>点击</button>
+    {{time}}
+    <transition>
+      <div v-html='rawHtml' v-if='seen'></div>
+    </transition>
+  </div>
+  
+  <div id="app2">
+    <div v-for="value in objs" :key="value">{{value}}</div>
+    <ul>
+      <li v-for="item in items" :key="item">
+        {{item}}
+      </li>
+    </ul>
+    <input type="text" v-model.lazy.trim.number='inputValue'/>
+    <div>{{inputValue}}</div>
+  </div>
+
+  <div>
+    <Input label="name"></Input>
+  </div>
+
+
+
+  <script>
+    let vm = new Vue({
+      el: "#app",
+      data: {
+        message: "页面加载于",
+        seen:true,
+        rawHtml:'<h1>head1</h1>'
+      },
+      computed:{
+        time:{
+          get:function(){
+            return  this.message + new Date().toLocaleString()
+          }, //getter
+          set:function(){}
+        } 
+
+      },
+      methods:{
+        handleClick:function(){
+          this.seen = !this.seen
+        }
+      },
+      created:function() {
+        console.log('组件创建',this.seen)
+      }
+    })
+    vm.$watch('seen',function(newValue,oldValue){
+      console.log('oldValue:',oldValue)
+      console.log('newValue:',newValue)
+    })
+
+    let vm2 = new Vue({
+      el:"#app2",
+      data:{
+        items:[1,2,3,4,5],
+        objs:{
+          title: 'How to do lists in Vue',
+          author: 'Jane Doe',
+          publishedAt: '2016-04-10'
+        },
+        inputValue:''
+      }
+    })
+
+    Vue.component('Input',{
+      props:['label'],
+      template:`
+      <div>
+        <label>{{label}}:</label>
+        <input/>
+      </div>
+      `,
+      data:function(){
+        return{
+         value:2234
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <title>设置</title>
+</head>
+<body>
+  
+  <div class="container">
+    <form id='settings-form'>
+      <div class="form-group">
+        <label for="savedLocation">文件保存路径：</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id='savedLocation'/>
+          <button class="input-group-append btn btn-outline-primary" id='selectLocation'>浏览</button>
+        </div>
+      </div>
+      <button type='submit' class="btn btn-primary" id='saveBtn'>保存</button>
+    </form>
+  </div>
+  <script>
+    require('./settings.js')
+  </script>
+</body>
+</html>

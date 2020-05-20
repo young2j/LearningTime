@@ -1,0 +1,28 @@
+body {
+  background: url(/static/images/img.jpg);
+  background-color: #00ff95;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+::-webkit-input-placeholder {
+  color: gold;
+}
+:-moz-placeholder {
+  color: gold;
+}
+::-moz-placeholder {
+  color: gold;
+}
+:-ms-input-placeholder {
+  color: gold;
+}
+::-ms-input-placeholder {
+  color: gold;
+}
+::placeholder {
+  color: gold;
+}
+

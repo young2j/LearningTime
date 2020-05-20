@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block head %}
+{{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/the_post.css')}}">
+{% endblock head %}
+
+{% block title %} Flasky-Moderate{% endblock title %}
+
+{% block page_content %}
+    <h1>Moderate
+        <span class="label label-warning" id='comment-count'>
+            {{ comments_num_not_disabled }}
+            
+        </span>
+    </h1>
+    <hr/>
+    
+    <div class="list-group">
+        {% for comment in comments  %}
+        <div class="list-group-item list-group-item-action">
+            <div class='comment'>
+                <div class="d-flex flex-column">
+                    <a href="{{url_for('user.user_info',username=comment.author.name)}}">
+                        <img src="{{comment.author.get_avatar(size=20)}}" alt="avatar">
+                        <p class='comment-author'>
+                            {{comment.author.name}}
+                        </p>
+                    </a>
+    
+                    {% if comment.disabled %}
+                    <a href="{{url_for('post.moderate_enable',enable=1,id=comment.id,page=pagination.page)}}">
+                        <span class="label label-danger">enable</span>
+                    </a>
+                    {% else %}
+                    <a href="{{url_for('post.moderate_enable',enable=0,id=comment.id,page=pagination.page)}}">
+                        <span class="label label-default">disable</span>
+                    </a>
+                    {% endif %}
+    
+                </div>
+                <p class='comment-body'>
+                    {% if comment.disabled %}
+                    <del>{{comment.body}}</del>
+                    {% else %}
+                    {{comment.body}}
+                    {% endif %}
+                </p>
+            </div>
+    
+            <div class='comment-time'>
+                <small>{{moment(comment.timestamp).format('L')}}</small>&emsp;
+                <small>{{moment(comment.timestamp).fromNow(refresh=True)}}</small>
+            </div>
+        </div>
+    {% endfor %}
+
+    {% if pagination %}
+        {{ macros.pagination_widget(pagination,'post.moderate')}}
+    {% endif %}
+
+{% endblock page_content %}

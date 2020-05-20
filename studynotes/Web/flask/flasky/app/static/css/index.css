@@ -1,0 +1,31 @@
+.post {
+    display: inline-flex;
+}
+
+/* p.post-author{
+    padding-left:30%;
+} */
+
+p.post-body{
+    margin-left: 20px;
+}
+
+.post-time {
+    display:flex;
+    padding-left:75%;
+    margin-top:0%;
+}
+
+.list-group-item{
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+#comment-count{
+    height:15px;
+    margin-top: 4px;
+}
+
+#comment-icon{
+    margin-top: 3px;
+}

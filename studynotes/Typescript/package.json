@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "compile":"npx tsc ./tsnotes/function.ts",
+    "postcompile":"node ./tsnotes/function.js"
+  },
+  "dependencies": {
+    "typescript": "^3.9.2"
+  }
+}

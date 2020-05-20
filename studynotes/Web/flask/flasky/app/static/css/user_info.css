@@ -1,0 +1,30 @@
+span.input-group-addon{
+    width:180px;
+}
+
+#basic-info {
+    width:300px;
+}
+
+.post {
+    display: inline-flex;
+}
+
+.post-time {
+    display:flex;
+    padding-left:60%;
+}
+
+.list-group-item{
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+#comment-count{
+    height:15px;
+    margin-top: 4px;
+}
+
+#comment-icon{
+    margin-top: 3px;
+}

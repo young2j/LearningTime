@@ -1,0 +1,127 @@
+{
+  "author": "ysj",
+  "name": "mdeditor",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "electron-store": "^5.1.0",
+    "electron-is-dev": "^1.1.0",
+    "uuid": "^3.4.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "concurrently \"wait-on http://localhost:3000 && D:/electron/electron.exe .\" \"cross-env BROWSER=none cnpm start\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "prepack": "cnpm run build && cnpm run buildMain",
+    "predist": "cnpm run build && cnpm run buildMain",
+    "buildMain": "webpack",
+    "release": "cross-env GH-TOCKEN='' electron-builder",
+    "prerelease": "cnpm run build && cnpm run buildMain"
+  },
+  "homepage": "./",
+  "build": {
+    "appId": "MDEditor",
+    "productName": "markdown编辑器",
+    "copyright": "Copyright @ 2020 ${author}",
+    "extends": null,
+    "publish": [
+      "github"
+    ],
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "settings/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "extraMetadata": {
+      "main": "./build/main.js"
+    },
+    "mac": {
+      "category": "public.app-category.productivity",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "dmg": {
+      "background": "assets/appdmg.png",
+      "icon": "assets/icon.icns",
+      "iconSize": 100,
+      "contents": [
+        {
+          "x": 380,
+          "y": 280,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 110,
+          "y": 280,
+          "type": "file"
+        }
+      ],
+      "window": {
+        "width": 500,
+        "height": 500
+      }
+    },
+    "win": {
+      "target": [
+        "msi",
+        "nsis"
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "${productName}-Web-Setup-${version}.${ext}",
+      "publisherName": "ysj"
+    },
+    "nsis": {
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "perMachine": false
+    }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.2.1",
+    "classnames": "^2.2.6",
+    "concurrently": "^5.1.0",
+    "cross-env": "^7.0.0",
+    "devtron": "^1.4.0",
+    "electron": "^8.0.0",
+    "electron-builder": "^22.3.2",
+    "electron-updater": "^4.2.0",
+    "node-gyp": "^6.1.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.1",
+    "react-simplemde-editor": "^4.1.0",
+    "wait-on": "^4.0.0"
+  }
+}

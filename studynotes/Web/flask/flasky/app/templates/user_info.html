@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/user_info.css')}}">
+    <!-- <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}"> -->
+{% endblock head %}
+
+
+{% block title %} Flasky-{{user.name}} {% endblock title %}
+
+
+
+{% block page_content %}
+    <h1>{{ user.name }}</h1>
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Profile</th>
+                <th scope="col">Posts</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    {% if current_user!=user and current_user.can(Permission.FOLLOW)%}
+                        {% if current_user.is_following(user) %}
+                        <a href="{{url_for('user.unfollow',username=user.name)}}">
+                            <button type="button" class="btn btn-danger">Unfollow</button>
+                        </a>
+                        {% else %}
+                        <a href="{{url_for('user.follow',username=user.name)}}">
+                            <button type="button" class="btn btn-info">Follow</button>
+                        </a>
+                        {% endif %}
+                    {% endif %}
+                    
+                    <button class="btn btn-info">
+                        <a href="{{url_for('user.followers',username=user.name)}}">
+                            Followers:
+                            <span class="badge badge-success">{{user.follower.count()}}</span>
+                        </a>
+                        <a href="{{url_for('user.followed',username=user.name)}}">
+                            Followed:
+                            <span class="badge badge-dark">{{user.followed.count()}}</span>
+                        </a>
+                    
+                        {% if current_user.is_authenticated and user!=current_user 
+                                                and user.is_following(current_user) %}
+                        <span class="label label-default">Follows you</span>
+                        {% endif %}
+                    </button>
+
+
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Role</span>
+                        <input type="text" class="form-control" id='basic-info' placeholder="{{user.role.name}}">
+                    </div>
+
+                    {% if user.location %}
+                    <div class="input-group">
+                        <span class="input-group-addon">Address</span>
+                        <a href="https://maps.baidu.com/search/{{user.location}}">
+                            <input type="text" class="form-control" id='basic-info' placeholder="{{user.location}}">
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    {% if current_user.is_administrator() %}
+                    <div class="input-group">
+                        <span class="input-group-addon">Email</span>
+                        <a href="mailto:{{user.email}}">
+                            <input type="text" class="form-control" id='basic-info' placeholder="{{user.email}}">
+                        </a>
+                    </div>
+                    {% endif %}
+
+                    {% if user.about_me %}
+                    <div class="input-group">
+                        <span class="input-group-addon">Introduction</span>
+                        <text class="form-control" id='basic-info'>{{user.about_me}}</text>
+                    </div>
+                    {% endif %}
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Member since</span>
+                        <text class="form-control" id='basic-info'>
+                            {{moment(user.member_since).format('LLL')}}
+                        </text>
+                    </div>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">Last seen</span>
+                        <text class="form-control" id='basic-info'>
+                            {{moment(user.last_seen).fromNow(refresh=True)}}
+                        </text>
+                    </div>
+
+                    {% if user==current_user and current_user.is_administrator() %}
+                    <a href="{{url_for('user.edit_profile_admin',id=user.id)}}" class='btn btn-primary'>
+                        Edit Profile
+                    </a>
+                    {% else %}
+                    <a href="{{url_for('user.edit_profile')}}" class='btn btn-default'>
+                        Edit Profile
+                    </a>
+                    {% endif %}
+                    
+                </td>
+                <td>
+                    {% include '_post_list.html' %}
+                    <div class="pagination">
+                        {{macros.pagination_widget(pagination,'post.index')}}
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
+
